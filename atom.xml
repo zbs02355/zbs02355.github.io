@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Clement-阿五(专栏)</title>
+  
+  <subtitle>Clement-阿五的读书笔记</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.clementblog.tech/"/>
+  <updated>2019-10-01T12:10:02.654Z</updated>
+  <id>https://www.clementblog.tech/</id>
+  
+  <author>
+    <name>Clement-阿五</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JNDI学习笔记</title>
+    <link href="https://www.clementblog.tech/2019/07/12/jndi-xue-xi-bi-ji/"/>
+    <id>https://www.clementblog.tech/2019/07/12/jndi-xue-xi-bi-ji/</id>
+    <published>2019-07-12T15:34:43.000Z</published>
+    <updated>2019-10-01T12:10:02.654Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JNDI学习笔记&quot;&gt;&lt;a href=&quot;#JNDI学习笔记&quot; class=&quot;headerlink&quot; title=&quot;JNDI学习笔记&quot;&gt;&lt;/a&gt;JNDI学习笔记&lt;/h1&gt;&lt;h3 id=&quot;基础知识篇&quot;&gt;&lt;a href=&quot;#基础知识篇&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="框架类" scheme="https://www.clementblog.tech/categories/%E6%A1%86%E6%9E%B6%E7%B1%BB/"/>
+    
+    
+      <category term="Java" scheme="https://www.clementblog.tech/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>考研基础阅读笔记</title>
+    <link href="https://www.clementblog.tech/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/"/>
+    <id>https://www.clementblog.tech/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/</id>
+    <published>2019-07-07T14:11:25.000Z</published>
+    <updated>2019-07-07T14:47:37.849Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;考研基础阅读笔记&quot;&gt;&lt;a href=&quot;#考研基础阅读笔记&quot; class=&quot;headerlink&quot; title=&quot;考研基础阅读笔记&quot;&gt;&lt;/a&gt;考研基础阅读笔记&lt;/h1&gt;&lt;h3 id=&quot;基础阅读（一）&quot;&gt;&lt;a href=&quot;#基础阅读（一）&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="考研" scheme="https://www.clementblog.tech/categories/%E8%80%83%E7%A0%94/"/>
+    
+    
+      <category term="考研阅读" scheme="https://www.clementblog.tech/tags/%E8%80%83%E7%A0%94%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSM框架常见面试题汇总</title>
+    <link href="https://www.clementblog.tech/2019/07/06/ssm-kuang-jia-chang-jian-mian-shi-ti-hui-zong/"/>
+    <id>https://www.clementblog.tech/2019/07/06/ssm-kuang-jia-chang-jian-mian-shi-ti-hui-zong/</id>
+    <published>2019-07-06T13:13:07.000Z</published>
+    <updated>2019-10-26T09:31:46.933Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;SSM框架常见面试题汇总&quot;&gt;&lt;a href=&quot;#SSM框架常见面试题汇总&quot; class=&quot;headerlink&quot; title=&quot;SSM框架常见面试题汇总&quot;&gt;&lt;/a&gt;SSM框架常见面试题汇总&lt;/h1&gt;&lt;h3 id=&quot;Spring篇&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="框架类" scheme="https://www.clementblog.tech/categories/%E6%A1%86%E6%9E%B6%E7%B1%BB/"/>
+    
+    
+      <category term="Java" scheme="https://www.clementblog.tech/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>choco学习感悟</title>
+    <link href="https://www.clementblog.tech/2019/06/28/choco-xue-xi-gan-wu/"/>
+    <id>https://www.clementblog.tech/2019/06/28/choco-xue-xi-gan-wu/</id>
+    <published>2019-06-28T00:20:18.000Z</published>
+    <updated>2019-11-03T10:47:46.774Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;chocolatey学习笔记&quot;&gt;&lt;a href=&quot;#chocolatey学习笔记&quot; class=&quot;headerlink&quot; title=&quot;chocolatey学习笔记&quot;&gt;&lt;/a&gt;chocolatey学习笔记&lt;/h1&gt;&lt;hr&gt;
+&lt;h3 id=&quot;介绍&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具类" scheme="https://www.clementblog.tech/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    
+    
+      <category term="软件包管理器" scheme="https://www.clementblog.tech/tags/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Maven安装与配置</title>
+    <link href="https://www.clementblog.tech/2019/06/26/maven-an-zhuang-yu-pei-zhi/"/>
+    <id>https://www.clementblog.tech/2019/06/26/maven-an-zhuang-yu-pei-zhi/</id>
+    <published>2019-06-26T11:45:35.000Z</published>
+    <updated>2019-07-09T10:46:32.794Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;&lt;p&gt;这是之前我安装、配置Maven的步骤，写在这里，便于以后查阅&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;Clement-阿五&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;系统环境：Windows
+        
+      
+    
+    </summary>
+    
+    
+      <category term="配置类" scheme="https://www.clementblog.tech/categories/%E9%85%8D%E7%BD%AE%E7%B1%BB/"/>
+    
+    
+      <category term="Java" scheme="https://www.clementblog.tech/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>photoshop2015配置与优化</title>
+    <link href="https://www.clementblog.tech/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/"/>
+    <id>https://www.clementblog.tech/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/</id>
+    <published>2019-05-18T08:27:53.000Z</published>
+    <updated>2019-07-09T10:46:49.391Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;photoshop2015配置与优化&quot;&gt;&lt;a href=&quot;#photoshop2015配置与优化&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="配置类" scheme="https://www.clementblog.tech/categories/%E9%85%8D%E7%BD%AE%E7%B1%BB/"/>
+    
+    
+      <category term="摄影" scheme="https://www.clementblog.tech/tags/%E6%91%84%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL的安装与配置</title>
+    <link href="https://www.clementblog.tech/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/"/>
+    <id>https://www.clementblog.tech/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/</id>
+    <published>2019-05-11T10:37:39.000Z</published>
+    <updated>2019-07-09T10:47:00.675Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;MySQL的安装与配置&quot;&gt;&lt;a href=&quot;#MySQL的安装与配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="配置类" scheme="https://www.clementblog.tech/categories/%E9%85%8D%E7%BD%AE%E7%B1%BB/"/>
+    
+    
+      <category term="MySQL" scheme="https://www.clementblog.tech/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序员必读书单</title>
+    <link href="https://www.clementblog.tech/2019/05/11/cheng-xu-yuan-bi-du-shu-dan/"/>
+    <id>https://www.clementblog.tech/2019/05/11/cheng-xu-yuan-bi-du-shu-dan/</id>
+    <published>2019-05-11T03:17:03.000Z</published>
+    <updated>2019-05-11T03:20:46.121Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;程序员必读书单&quot;&gt;&lt;a href=&quot;#程序员必读书单&quot; class=&quot;headerlink&quot; title=&quot;程序员必读书单&quot;&gt;&lt;/a&gt;程序员必读书单&lt;/h1&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;代码整洁之道&lt;/li&gt;
+&lt;li&gt;代码整洁之道
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="书籍" scheme="https://www.clementblog.tech/tags/%E4%B9%A6%E7%B1%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>空间数据分析学习笔记</title>
+    <link href="https://www.clementblog.tech/2019/05/07/kong-jian-shu-ju-fen-xi-xue-xi-bi-ji/"/>
+    <id>https://www.clementblog.tech/2019/05/07/kong-jian-shu-ju-fen-xi-xue-xi-bi-ji/</id>
+    <published>2019-05-07T07:58:18.000Z</published>
+    <updated>2019-10-26T09:31:01.803Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;空间数据分析学习笔记&quot;&gt;&lt;a href=&quot;#空间数据分析学习笔记&quot; class=&quot;headerlink&quot; title=&quot;空间数据分析学习笔记&quot;&gt;&lt;/a&gt;空间数据分析学习笔记&lt;/h1&gt;&lt;h3 id=&quot;空间数据模型篇&quot;&gt;&lt;a href=&quot;#空间数据模型篇&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="课程" scheme="https://www.clementblog.tech/categories/%E8%AF%BE%E7%A8%8B/"/>
+    
+    
+      <category term="数据分析" scheme="https://www.clementblog.tech/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自然语言处理学习笔记</title>
+    <link href="https://www.clementblog.tech/2019/05/05/zi-ran-yu-yan-chu-li-xue-xi-bi-ji/"/>
+    <id>https://www.clementblog.tech/2019/05/05/zi-ran-yu-yan-chu-li-xue-xi-bi-ji/</id>
+    <published>2019-05-05T12:54:09.000Z</published>
+    <updated>2019-05-07T14:47:56.368Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;自然语言处理学习笔记&quot;&gt;&lt;a href=&quot;#自然语言处理学习笔记&quot; class=&quot;headerlink&quot; title=&quot;自然语言处理学习笔记&quot;&gt;&lt;/a&gt;自然语言处理学习笔记&lt;/h1&gt;&lt;h3 id=&quot;基础知识篇&quot;&gt;&lt;a href=&quot;#基础知识篇&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="自然语言处理" scheme="https://www.clementblog.tech/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端学习笔记</title>
+    <link href="https://www.clementblog.tech/2019/04/30/qian-duan-xue-xi-bi-ji/"/>
+    <id>https://www.clementblog.tech/2019/04/30/qian-duan-xue-xi-bi-ji/</id>
+    <published>2019-04-30T09:02:34.000Z</published>
+    <updated>2019-05-07T14:48:24.492Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前端学习笔记&quot;&gt;&lt;a href=&quot;#前端学习笔记&quot; class=&quot;headerlink&quot; title=&quot;前端学习笔记&quot;&gt;&lt;/a&gt;前端学习笔记&lt;/h1&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;所有的空格 / 空行都会被浏览器解析为一个空格&lt;/li&gt;
+&lt;li&gt;即将被废弃的标签
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="web" scheme="https://www.clementblog.tech/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LSTM系列神经网络学习笔记</title>
+    <link href="https://www.clementblog.tech/2019/04/30/lstm-xi-lie-shen-jing-wang-luo-xue-xi-bi-ji/"/>
+    <id>https://www.clementblog.tech/2019/04/30/lstm-xi-lie-shen-jing-wang-luo-xue-xi-bi-ji/</id>
+    <published>2019-04-30T08:13:33.000Z</published>
+    <updated>2019-05-07T14:49:16.772Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;RNN系列学习笔记&quot;&gt;&lt;a href=&quot;#RNN系列学习笔记&quot; class=&quot;headerlink&quot; title=&quot;RNN系列学习笔记&quot;&gt;&lt;/a&gt;RNN系列学习笔记&lt;/h1&gt;&lt;h3 id=&quot;LSTM篇&quot;&gt;&lt;a href=&quot;#LSTM篇&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="深度学习" scheme="https://www.clementblog.tech/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高效搜索学习笔记</title>
+    <link href="https://www.clementblog.tech/2019/04/30/gao-xiao-sou-suo-xue-xi-bi-ji/"/>
+    <id>https://www.clementblog.tech/2019/04/30/gao-xiao-sou-suo-xue-xi-bi-ji/</id>
+    <published>2019-04-30T08:13:03.000Z</published>
+    <updated>2019-10-01T12:10:53.720Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;高效搜索学习笔记&quot;&gt;&lt;a href=&quot;#高效搜索学习笔记&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具类" scheme="https://www.clementblog.tech/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    
+    
+      <category term="高效搜索" scheme="https://www.clementblog.tech/tags/%E9%AB%98%E6%95%88%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>知识图谱学习笔记</title>
+    <link href="https://www.clementblog.tech/2019/04/30/zhi-shi-tu-pu-xue-xi-bi-ji/"/>
+    <id>https://www.clementblog.tech/2019/04/30/zhi-shi-tu-pu-xue-xi-bi-ji/</id>
+    <published>2019-04-30T08:12:34.000Z</published>
+    <updated>2019-05-07T14:47:35.634Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;知识图谱学习笔记&quot;&gt;&lt;a href=&quot;#知识图谱学习笔记&quot; class=&quot;headerlink&quot; title=&quot;知识图谱学习笔记&quot;&gt;&lt;/a&gt;知识图谱学习笔记&lt;/h1&gt;&lt;h3 id=&quot;基础知识篇&quot;&gt;&lt;a href=&quot;#基础知识篇&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="自然语言处理" scheme="https://www.clementblog.tech/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建步骤</title>
+    <link href="https://www.clementblog.tech/2019/04/29/hexo-bo-ke-da-jian-bu-zou/"/>
+    <id>https://www.clementblog.tech/2019/04/29/hexo-bo-ke-da-jian-bu-zou/</id>
+    <published>2019-04-29T12:17:29.000Z</published>
+    <updated>2019-11-03T11:39:42.604Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Hexo博客搭建步骤&quot;&gt;&lt;a href=&quot;#Hexo博客搭建步骤&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客搭建步骤&quot;&gt;&lt;/a&gt;Hexo博客搭建步骤&lt;/h1&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;注册一个Github账号，&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具类" scheme="https://www.clementblog.tech/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    
+    
+      <category term="博客搭建" scheme="https://www.clementblog.tech/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello-world</title>
+    <link href="https://www.clementblog.tech/2019/04/22/hello-world/"/>
+    <id>https://www.clementblog.tech/2019/04/22/hello-world/</id>
+    <published>2019-04-22T14:00:15.000Z</published>
+    <updated>2019-04-22T14:00:49.073Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>互联网创业大赛参赛指南</title>
+    <link href="https://www.clementblog.tech/2019/04/03/hu-lian-wang-chuang-ye-da-sai-can-sai-zhi-nan/"/>
+    <id>https://www.clementblog.tech/2019/04/03/hu-lian-wang-chuang-ye-da-sai-can-sai-zhi-nan/</id>
+    <published>2019-04-03T12:17:37.000Z</published>
+    <updated>2019-04-22T13:56:26.735Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;互联网创业大赛参赛指南&quot;&gt;&lt;a href=&quot;#互联网创业大赛参赛指南&quot; class=&quot;headerlink&quot; title=&quot;互联网创业大赛参赛指南&quot;&gt;&lt;/a&gt;互联网创业大赛参赛指南&lt;/h1&gt;&lt;h3 id=&quot;赛前热身&quot;&gt;&lt;a href=&quot;#赛前热身&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="互联网+" scheme="https://www.clementblog.tech/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>考研数学导学课学习感悟</title>
+    <link href="https://www.clementblog.tech/2019/03/30/kao-yan-shu-xue-dao-xue-ke-xue-xi-gan-wu/"/>
+    <id>https://www.clementblog.tech/2019/03/30/kao-yan-shu-xue-dao-xue-ke-xue-xi-gan-wu/</id>
+    <published>2019-03-30T09:09:11.000Z</published>
+    <updated>2019-03-30T09:37:46.854Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;考研数学导学课学习感悟&quot;&gt;&lt;a href=&quot;#考研数学导学课学习感悟&quot; class=&quot;headerlink&quot; title=&quot;考研数学导学课学习感悟&quot;&gt;&lt;/a&gt;考研数学导学课学习感悟&lt;/h1&gt;&lt;h2 id=&quot;备考阶段划分&quot;&gt;&lt;a href=&quot;#备考阶段划分&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="考研" scheme="https://www.clementblog.tech/tags/%E8%80%83%E7%A0%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>四六级听力训练四步法学习感悟</title>
+    <link href="https://www.clementblog.tech/2019/03/30/si-liu-ji-ting-li-xun-lian-si-bu-fa-xue-xi-gan-wu/"/>
+    <id>https://www.clementblog.tech/2019/03/30/si-liu-ji-ting-li-xun-lian-si-bu-fa-xue-xi-gan-wu/</id>
+    <published>2019-03-30T08:47:49.000Z</published>
+    <updated>2019-03-30T09:05:17.305Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;四六级听力训练四步法&quot;&gt;&lt;a href=&quot;#四六级听力训练四步法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="听力" scheme="https://www.clementblog.tech/tags/%E5%90%AC%E5%8A%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鞋类产品保养学习感悟</title>
+    <link href="https://www.clementblog.tech/2019/03/24/xie-lei-chan-pin-bao-yang-xue-xi-gan-wu/"/>
+    <id>https://www.clementblog.tech/2019/03/24/xie-lei-chan-pin-bao-yang-xue-xi-gan-wu/</id>
+    <published>2019-03-24T07:49:01.000Z</published>
+    <updated>2019-03-24T08:18:10.046Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;鞋类产品保养学习感悟&quot;&gt;&lt;a href=&quot;#鞋类产品保养学习感悟&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="家居" scheme="https://www.clementblog.tech/tags/%E5%AE%B6%E5%B1%85/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>JNDI学习笔记</title>
+      <link href="/2019/07/12/jndi-xue-xi-bi-ji/"/>
+      <url>/2019/07/12/jndi-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="JNDI学习笔记"><a href="#JNDI学习笔记" class="headerlink" title="JNDI学习笔记"></a>JNDI学习笔记</h1><h3 id="基础知识篇"><a href="#基础知识篇" class="headerlink" title="基础知识篇"></a>基础知识篇</h3><hr><ol><li>JNDI（Java Naming and Directory Interface）</li><li>原理：将要使用的东西放到一个固定的地方，要使用的时候，从这个地方根据名称取出我们要用的东西</li><li>使用方法：<pre><code>Context context = new InitialContext(); //获取到JNDI上下文环境DataSource ds = (DataSourse)context.lookup(jndiName);  //在JNDI环境中获取指定的数据源</code></pre></li><li>使用JDBC操作数据库的步骤：<ol><li>加载数据库驱动</li><li>获取数据库连接</li><li>操作数据库</li><li>关闭数据库连接</li></ol></li><li>在Tomcat 4.1.27之后，可将数据库连接池配置在服务器上。</li><li>在服务器上有一个JNDI树，上面绑定了许多DataSourse，每一个DataSourse对应许多连接Connection，通过获取到这些连接进行数据库操作，如图<img src="/2019/07/12/jndi-xue-xi-bi-ji/j1-1.PNG" class=""></li><li>使用是从数据库连接池中获取一个连接，使用完毕后<strong>关闭掉这个连接</strong>，即将连接放回连接池中。<ul><li>不关闭的话，连接池也会自动回收，但时间过久，如果频繁访问数据库，会导致连接池中无连接可用。</li></ul></li></ol><blockquote><p>在Tomcat中配置数据库连接池时，Tomcat的<code>lib</code>目录必须要有<strong>数据库的驱动程序</strong></p></blockquote><blockquote><p>参考文章：<a href="https://www.jianshu.com/p/ad4c16e0b8ba" target="_blank" rel="noopener">java（JNDI）</a></p></blockquote><h3 id="配置篇"><a href="#配置篇" class="headerlink" title="配置篇"></a>配置篇</h3><hr><blockquote><p>使用环境：<br>Java版本：jdk 1.8<br>服务器版本：Apache Tomcat 9.0<br>数据库版本：MySQL Community 5.27</p></blockquote><ol><li>将数据库驱动包放到Tomcat的<code>lib</code>目录下</li><li>修改<code>conf</code>目录下的<strong>server.xml</strong>文件，新增resource标签，如图<img src="/2019/07/12/jndi-xue-xi-bi-ji/j2-1.PNG" class=""><pre><code>&lt;Resource   name="jdbc/mysql"  auth="Container"   type="javax.sql.DataSource"  maxActive="100"   maxIdle="30"   maxWait="10000"  username="root"   password="root"  driverClassName="com.mysql.jdbc.Driver"  url="jdbc:mysql://127.0.0.1:3306/springtest?useUnicode=true&amp;characterEncoding=utf-8"/&gt;</code></pre></li><li>在Web项目的<strong>web.xml</strong>文件中新增对resource的引用，如图<img src="/2019/07/12/jndi-xue-xi-bi-ji/j2-2.PNG" class=""><pre><code>&lt;resource-ref&gt; &lt;res-ref-name&gt;jdbc/mysql&lt;/res-ref-name&gt; &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt; &lt;res-auth&gt;Container&lt;/res-auth&gt;&lt;/resource-ref&gt;   </code></pre></li><li>修改<code>conf</code>目录下的<strong>context.xml</strong>文件，新增resource-link标签，如图<img src="/2019/07/12/jndi-xue-xi-bi-ji/j2-3.PNG" class=""><pre><code>&lt;ResourceLink name="mysqlData" global="jdbc/mysql" type="javax.sql.DataSource"/&gt;</code></pre></li><li>至此，数据库连接池就已经配置完了。</li></ol><blockquote><p>参考文章：<a href="https://www.jianshu.com/p/de936f8ce3a9" target="_blank" rel="noopener">数据连接学习（一）：JNDI入门及数据源配置</a></p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 框架类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>考研基础阅读笔记</title>
+      <link href="/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/"/>
+      <url>/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="考研基础阅读笔记"><a href="#考研基础阅读笔记" class="headerlink" title="考研基础阅读笔记"></a>考研基础阅读笔记</h1><h3 id="基础阅读（一）"><a href="#基础阅读（一）" class="headerlink" title="基础阅读（一）"></a>基础阅读（一）</h3><hr><ol><li><p>文章作者是<strong>外国人</strong>，解题时选项与原文主体一致</p></li><li><p>文章一般是<strong>议论文</strong>，议论文包括论点（中心）、论据（细节）和论证（联系）</p><ul><li>论据主要指的是例子、人民</li><li>论证包含正方向的和反方向的 <img src="/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/2019-07-07_20-05-07.jpg" class=""><blockquote><p>论据不重要</p></blockquote></li></ul></li><li><p>针对命题人处理：</p><ul><li>6种题型</li><li>逻辑上一般与原文呈现<strong>逆否</strong> <img src="/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/2019-07-07_20-26-14.jpg" class=""></li></ul></li><li><p>解题流程：</p><ul><li>读题干（1min） –&gt; 扫全文（8min） –&gt; 解题（10min）</li></ul></li><li><p>题型分类：</p><ul><li>中心<ul><li>主题题 ————论点数量多</li><li>态度题 ————分类</li></ul></li><li>联系<ul><li>论证题 ————找论点</li><li>语义题 ————上下文</li></ul></li><li>细节题<ul><li>细节题 ————题干改写（逻辑上） + 语法解题</li><li>因果题 ————先（因为…）后（所以…） <img src="/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/2019-07-07_20-49-45.jpg" class=""></li></ul></li></ul></li><li><p>各题型讲解</p><ul><li>论证题<ul><li>特征：题干中有论据，对目的进行提问</li><li>解题关键：<strong>论点</strong><pre><code>论点的特征:   - 简短 + 单一   - 判断句（...是...）      - 含有be, 系动词的句子   - 宾语从句、同位语从句作为论点</code></pre></li><li>题型干扰：在于细节（满足记叙文六要素中的三个就称作细节）<img src="/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/2019-07-07_21-04-35.jpg" class=""></li></ul></li></ul></li><li><p>插入语的位置有3种：</p><ul><li>主语, xxx , 谓语</li><li>主语谓语, xxx, 宾语</li><li>主语谓语宾语, xxx<img src="/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/2019-07-07_21-18-21.png" class=""></li></ul></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考研 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考研阅读 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SSM框架常见面试题汇总</title>
+      <link href="/2019/07/06/ssm-kuang-jia-chang-jian-mian-shi-ti-hui-zong/"/>
+      <url>/2019/07/06/ssm-kuang-jia-chang-jian-mian-shi-ti-hui-zong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="SSM框架常见面试题汇总"><a href="#SSM框架常见面试题汇总" class="headerlink" title="SSM框架常见面试题汇总"></a>SSM框架常见面试题汇总</h1><h3 id="Spring篇"><a href="#Spring篇" class="headerlink" title="Spring篇"></a>Spring篇</h3><hr><ol><li>Spring的作用：<ul><li>作用：Spring（轻量级框架），是一个Bean工厂，用于管理Bean的生命周期、框架集成</li><li>核心：<strong>IOC(service反转给acton)/DI（dao–&gt;service）</strong> 和 <strong>AOP</strong></li></ul></li><li>IOC的作用：解决对象之间的依赖问题，通过注解 / XML文件将不同的对象进行关联，降低耦合度</li><li>配置文件中的内容：<ul><li>开启事务注解驱动</li><li>事务管理器</li><li>开启注解功能，并配置扫描包</li><li>配置数据库</li><li>配置SQL会话工厂，别名，映射文件</li></ul></li><li>返回具体数据类型的注解：<pre><code>@RequestBody</code></pre></li><li>DI的3种方式：<ul><li>构造器注入（构造方法）  ——XML</li><li>属性的setter方法注入   ——XML</li><li>接口注入</li></ul></li><li>Spring中有哪些模式：<ul><li>工厂模式：通过方法创建Bean</li><li>单例模式：每个Bean的作用域都是单例</li><li>代理模式：例如AOP</li></ul></li></ol><blockquote><p>注：Bean的作用域：<br>   singleton, prototype;<br>   request, webSocket;<br>   application, session;</p></blockquote><blockquote><p>注：单例：在整个运行过程中只有一个实例</p></blockquote><ol start="7"><li>IOC的原理：<ul><li>通过Java反射机制生成对象注入</li></ul></li></ol><blockquote><p>Java反射机制：<br>   动态获取对象所需要的属性和方法</p></blockquote><ol start="8"><li>AOP的原理：<ul><li>动态代理</li></ul></li></ol><blockquote><p>动态代理<br>   JDK动态代理（Spring默认）、CGLIB动态代理</p></blockquote><h3 id="Spring-MVC篇"><a href="#Spring-MVC篇" class="headerlink" title="Spring MVC篇"></a>Spring MVC篇</h3><hr><ol><li>Spring MVC的控制器是单例模式，具有什么问题？如何解决？<ul><li>问题：多线程访问时的线程安全问题</li><li>解决方案：不用同步，控制器里不要写字段</li></ul></li><li>SpringMvc中函数的<strong>返回值</strong>？<ul><li>返回值：String、ModelAndView对象、List、Set</li></ul></li><li>Spring MVC工作流程：<img src="/2019/07/06/ssm-kuang-jia-chang-jian-mian-shi-ti-hui-zong/s1.PNG" class=""></li></ol><h3 id="Mybatis篇"><a href="#Mybatis篇" class="headerlink" title="Mybatis篇"></a>Mybatis篇</h3><hr><ol><li>Mybatis与Ibatis的区别：<ul><li>Mybatis是Ibatis的升级版本</li></ul></li><li>Mybatis的接口绑定：<ul><li>实现了DAO层与XML文件的绑定，自动生成数据操作的相关接口。</li></ul></li><li>注解和XML绑定的使用情况：<ul><li>当SQL语句很简单时，使用注解</li></ul></li><li>Mybatis的核心类是<strong>SqlSession</strong></li><li>Mybatis的优势：<ul><li>独立SQL语句</li><li>将JDBC、底层API进行封装，将结果集自动转换成pojo</li><li>灵活编写SQL语句</li></ul></li><li><code>${}</code>和<code>#{}</code>的区别？<ul><li><code>${}</code>: 简单字符串替换，把${}直接替换成变量的值，再将其进行预编译</li><li><code>#{}</code>: 先将sql中的#{}替换成<code>?</code>, 再进行预编译，可以防止SQL注入</li></ul></li><li>Mybatis工作原理图：<img src="/2019/07/06/ssm-kuang-jia-chang-jian-mian-shi-ti-hui-zong/s2.PNG" class=""></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 框架类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>choco学习感悟</title>
+      <link href="/2019/06/28/choco-xue-xi-gan-wu/"/>
+      <url>/2019/06/28/choco-xue-xi-gan-wu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="chocolatey学习笔记"><a href="#chocolatey学习笔记" class="headerlink" title="chocolatey学习笔记"></a>chocolatey学习笔记</h1><hr><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ol><li>chocolatey是一款类似于Linux系统中的<code>rpm、yum</code>的Windows软件包管理器，安装包完全来自于软件的官网，不会添加任何第三方代码，安全、可靠<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3></li><li>以管理员方式运行命令行cmd</li><li>输入以下命令，完成安装，命令如图<pre><code>@powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin</code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3></li><li>安装软件，命令如下<pre><code>choco install 包名</code></pre></li><li>查看本地软件，命令如下<pre><code>choco list -lo</code></pre></li><li>更新软件，命令如下<pre><code>choco update 包名</code></pre></li><li>卸载软件，命令如下<pre><code>choco uninstall 包名</code></pre></li><li>查看软件是否需要更新，命令如下<pre><code>choco outdated</code></pre></li></ol><blockquote><p>注：可使用<code>--yes</code>选项，自动安装，安装时无需再输入y</p></blockquote><blockquote><p>参考文章：<a href="https://www.jianshu.com/p/5325decea0d2" target="_blank" rel="noopener">Windows下Chocolatey上手教程</a></p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 软件包管理器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Maven安装与配置</title>
+      <link href="/2019/06/26/maven-an-zhuang-yu-pei-zhi/"/>
+      <url>/2019/06/26/maven-an-zhuang-yu-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>这是之前我安装、配置Maven的步骤，写在这里，便于以后查阅</p><footer><strong>Clement-阿五</strong></footer></blockquote><blockquote><p>系统环境：Windows 10 专业版<br>  编译器：IntelliJ Idea 2018.3.1; Eclipse-JavaEE<br>  Maven版本：3.6.1</p></blockquote><h3 id="安装Maven"><a href="#安装Maven" class="headerlink" title="安装Maven"></a>安装Maven</h3><hr><ol><li>从<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">Maven官网</a>上下载二进制版本，如图<img src="/2019/06/26/maven-an-zhuang-yu-pei-zhi/m1.PNG" class=""></li><li>将Maven安装目录的<code>bin</code>目录添加到path环境变量中，如图<img src="/2019/06/26/maven-an-zhuang-yu-pei-zhi/m2.PNG" class=""></li><li>在命令提示符中输入命令<pre><code>mvn -v</code></pre>,若出现一下结果，则安装成功，如图<img src="/2019/06/26/maven-an-zhuang-yu-pei-zhi/m3.PNG" class=""></li></ol><h3 id="配置Maven"><a href="#配置Maven" class="headerlink" title="配置Maven"></a>配置Maven</h3><h4 id="IntelliJ-IDEA中配置Maven"><a href="#IntelliJ-IDEA中配置Maven" class="headerlink" title="IntelliJ IDEA中配置Maven"></a>IntelliJ IDEA中配置Maven</h4><hr><ol><li>在Maven安装目录中创建一个名为<code>repository</code>的目录，用来存放Maven下载的Jar包，如图<img src="/2019/06/26/maven-an-zhuang-yu-pei-zhi/m4.PNG" class=""></li><li>在IntelliJ IDEA的设置中将内置的Maven换成我们下载的Maven，如图<img src="/2019/06/26/maven-an-zhuang-yu-pei-zhi/m5.PNG" class=""></li></ol><h4 id="Eclipse中配置Maven"><a href="#Eclipse中配置Maven" class="headerlink" title="Eclipse中配置Maven"></a>Eclipse中配置Maven</h4><hr><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 配置类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>photoshop2015配置与优化</title>
+      <link href="/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/"/>
+      <url>/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/</url>
+      
+        <content type="html"><![CDATA[<h1 id="photoshop2015配置与优化"><a href="#photoshop2015配置与优化" class="headerlink" title="photoshop2015配置与优化"></a>photoshop2015配置与优化</h1><hr><blockquote><p>这是之前我配置和优化Photoshop的步骤，写在这里，便于以后查阅</p><footer><strong>Clement-阿五</strong></footer></blockquote><blockquote><p>系统环境：Windows10 专业版<br>  Photoshop版本：Photoshop CC 2015</p></blockquote><ol><li>在Photoshop保存图片时，提示<code>无法保存，因为没有足够内存</code>和<code>要求96和8之间的整数</code>，如图 <img src="/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/ps1.PNG" class=""></li><li>首先，修改注册表，定位到<pre><code>HKEY_CURRENT_USER\Software\Adobe\Photoshop\90.0</code></pre> 双击打开<strong>90.0</strong>这个文件夹，新建DWORD(32位)值，并修改其值，具体内容如图 <img src="/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/ps2.PNG" class=""> <img src="/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/ps3.PNG" class=""><ul><li>【注】不同版本的Photoshop这里的文件夹数字是不一样的</li></ul></li><li>然后，重启Photoshop，打开<strong>编辑-&gt;首选项-&gt;性能</strong>，在文件处理里选择<strong>Camera Raw 首选项</strong>，清空缓存、修改位置、更改大小，如图<img src="/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/ps4.PNG" class=""></li><li>接着，在性能里，更改Photoshop内存使用量，如图<img src="/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/ps5.PNG" class=""></li><li>接着，更改Photoshop缓存的暂存位置，选择除系统盘外的其它分区，如图<img src="/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/ps6.PNG" class=""></li><li>最后，重启Photoshop</li></ol><blockquote><p>参考教程：<a href="https://jingyan.baidu.com/article/e73e26c06829b424adb6a71c.html" target="_blank" rel="noopener">无法完成请求‘要求96和8之间的整数’解决方案</a>  <a href="http://www.16xx8.com/photoshop/jiaocheng/2015/137105.html?winzoom=1" target="_blank" rel="noopener">优化技巧: PS保存时总提示没有足够内存怎么办？</a></p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 配置类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL的安装与配置</title>
+      <link href="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/"/>
+      <url>/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="MySQL的安装与配置"><a href="#MySQL的安装与配置" class="headerlink" title="MySQL的安装与配置"></a>MySQL的安装与配置</h1><hr><blockquote><p>这是之前我安装和配置MySQL的步骤，写在这里，便于以后查阅</p><footer><strong>Clement-阿五</strong></footer></blockquote><blockquote><p>系统环境：Windows10<br>  MySQL版本：社区版5.7</p></blockquote><ol><li>首先打开从<a href="https://www.mysql.com/downloads/" target="_blank" rel="noopener">MySQL官网</a>下载好的MySQL5.7的安装包，同意许可</li><li>然后选择安装类型，这里选择“开发者”，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms1.PNG" class=""></li><li>然后，检查并安装所需要的以来，点击“执行”按钮执行，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms2.PNG" class=""></li><li>接着，开始安装，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms3.PNG" class=""></li><li>安装完成后，进入配置界面，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms4.PNG" class=""></li><li>在配置中，除MySQL账户配置外，都可以保持默认，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms5.PNG" class=""> <img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms6.PNG" class=""></li><li><strong>提示</strong>：在配置Windows服务时，建议把第二个复选框取消勾选，这样防止MySQL自启动，拖慢电脑开机速度，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms7.PNG" class=""><ul><li>这样在每次需要启动MySQL时，需要在<strong>服务</strong>界面手动开启</li></ul></li><li>配置完成后，进入应用配置界面，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms8.PNG" class=""></li><li>接着，进入到测试连接服务器界面，输入管理员密码，测试与MySQL服务器的连接，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms9.PNG" class=""></li><li>配置完成后，进入最终配置完成界面，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms10.PNG" class=""></li><li>安装完成，如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms11.PNG" class=""></li><li>把MySQL服务器安装目录下的<code>bin</code>目录的完整路径添加到系统环境变量path中（注意不是<em>用户变量</em>！），如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms13.PNG" class=""></li><li>环境变量配置完成后，在任意位置打开命令行即可连接到MySQL，输入命令<pre><code>mysql -h localhost -u用户名 -p密码</code></pre>, 如图<img src="/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/ms12.PNG" class=""><ul><li>注意<code>-u</code>和<code>用户名</code>，<code>-p</code>和<code>密码</code>之间没有空格</li></ul></li><li>MySQL自带的workbench是英文界面，对于初学者不太好操作，这里推荐SQLyog，界面和SQL Server的SSMS差不多</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 配置类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>程序员必读书单</title>
+      <link href="/2019/05/11/cheng-xu-yuan-bi-du-shu-dan/"/>
+      <url>/2019/05/11/cheng-xu-yuan-bi-du-shu-dan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="程序员必读书单"><a href="#程序员必读书单" class="headerlink" title="程序员必读书单"></a>程序员必读书单</h1><hr><ul><li>代码整洁之道</li><li>代码整洁之道 程序员的职业素养</li><li>设计模式：可复用面向对象软件的基础</li><li>重构：改善既有代码的设计</li><li>深入浅出设计模式</li><li>领域驱动设计:软件核心复杂性应对之道</li><li>软技能:代码之外的生存指南</li><li>架构整洁之道</li><li>高效的工程师</li><li>程序员修炼之道:从小工到专家</li><li>Java编程思想</li><li>effective java 中文版</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 书籍 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>空间数据分析学习笔记</title>
+      <link href="/2019/05/07/kong-jian-shu-ju-fen-xi-xue-xi-bi-ji/"/>
+      <url>/2019/05/07/kong-jian-shu-ju-fen-xi-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="空间数据分析学习笔记"><a href="#空间数据分析学习笔记" class="headerlink" title="空间数据分析学习笔记"></a>空间数据分析学习笔记</h1><h3 id="空间数据模型篇"><a href="#空间数据模型篇" class="headerlink" title="空间数据模型篇"></a>空间数据模型篇</h3><hr><ol><li>地图认知模型针对不同的使用者分为不同的模型<ul><li>设计者</li><li>使用者</li></ul></li><li>地球模型的3面（2 + 1）<ul><li>任意水准面，大地水准面</li><li>地球表面 </li></ul></li><li>大地坐标：由<strong>点</strong>和<strong>角度</strong>共同确定</li><li>地理格网：用于空间要素定位的定位参考系统<ul><li>由<strong>经线</strong>，<strong>纬线</strong>组成</li></ul></li><li>地理坐标系 = 地理格网？ （1-P17）</li><li>变形分三种：<ul><li>长度</li><li>面积</li><li>角度</li></ul></li><li>投影：地理坐标 –&gt; 平面坐标</li><li>1：100万地形图 / 省区图：<strong>兰伯特投影</strong>；除此均为<strong>高斯-克吕格投影</strong></li><li>空间数据逻辑模型：概念模型 -&gt; 物理模型的桥梁</li><li>栅格的形状有正方形、矩形</li><li>栅格数据的分层表示，每一层表示一种属性</li><li>栅格单元的边长：L = 1/2 * |S (1-P45)</li><li>镶嵌数据模型：小面块拟合物体自然表面</li><li>三维空间数据模型：面模型、体模型、混合模型（面模型 + 体模型）</li><li>四叉树：二二分，全相同的就不用再分割了</li><li>按列合并：<ul><li>merge：需要共同变量</li><li>cbind: 直接添加</li></ul></li><li>按行合并：rbind(列名相同)</li><li><strong>空间数据</strong>：有空间坐标 / 相对位置的数据</li></ol><h3 id="空间自相关篇"><a href="#空间自相关篇" class="headerlink" title="空间自相关篇"></a>空间自相关篇</h3><hr><ol><li>空间相关性：变量通过空间邻近与自己相关，即某地发生的事件会影响到旁边地点发生的时间</li><li>空间异质性：地理空间上的区域分布不均，发展不均</li><li>空间统计常用方法：<ul><li>点模式分析方法：<ul><li>一阶<ul><li>样方计数法</li><li>核密度法</li></ul></li><li>二阶<ul><li>K函数，L函数</li><li>G函数、F函数</li><li>最近邻指数NNI</li></ul></li></ul></li><li>面状数据空间模式分析<ul><li>空间自相关分析<ul><li>Moran Index</li><li>Getis G</li><li>Genry’s C</li></ul></li></ul></li><li>连续空间数据分析<ul><li>确定性插值<ul><li>局部性插值<ul><li>反向权重距离插值</li><li>径向基函数插值</li><li>局部多项式插值</li></ul></li><li>全局性插值<ul><li>全局多项式插值</li></ul></li></ul></li><li>不确定性插值<ul><li>普通克里金</li><li>简单克里金</li><li>泛克里金</li><li>块克里金</li><li>协同克里金</li></ul></li></ul></li><li>空间回归分析<ul><li>空间自回归</li><li>地理加权回归</li></ul></li></ul></li><li>空间统计的工具：R, ArcGIS, OpenGeoDa, SaTSan, WinBUGS</li><li>空间自相关分析：指在邻近区域上某变量的同一属性值之间的相关程度，主要是利用<strong>空间自相关系数</strong>进行<em>度量并检验</em>邻域上属性变量是否呈现高高相邻，低低相邻，高低间错分布<br>，即有无聚集性</li><li><strong>空间正相关</strong>：在邻域上，某变量的同一属性值表现出相同 / 相似的相关程度，即属性值在空间区域上呈现高的地方，邻近区域也高。即呈现出聚集的趋势，为聚集分布</li></ol><p><strong>空间负相关</strong>：在邻域上，某变量的同一属性值表现出不同的相关程度，即属性值在空间区域上呈现高的地方，邻近区域反而低，即呈现出互斥的趋势，为均匀分布<br><strong>空间不相关</strong>：在邻域上，某变量的同一属性值没有表现出任何依赖关系，即呈现随机分布<br>7. 空间自相关分析分为：</p><ul><li>全局空间自相关分析<ul><li>定义：在整个研究区域范围内分析变量在空间分布上的聚集程度</li><li>全局Moran’I：<ul><li>公式：区域间的协方差和方差之比</li><li>反映属性变量在整个研究区域范围内的空间聚集程度</li><li>性质：<ul><li><code>&gt;0</code>: 空间正相关，聚集分布</li><li><code>&gt;0</code>: 空间负相关，离散互斥</li><li><code>=0</code>: 空间不相关，随机分布</li></ul></li></ul></li></ul></li><li>局部空间自相关分析<ul><li>定义：在特定的局部区域范围内分析变量在空间分布上的聚集程度</li><li>局部Moran’I：<ul><li>公式：同上，大体相同</li><li>反映属性变量在局部区域范围内的空间聚集程度</li><li>性质：同上</li></ul></li></ul></li><li>【注】不论哪种莫兰指数，要使莫兰指数要有意义，必须建立在已经做了显著性检验（基于蒙特卡罗的随机化零检验、Z显著性检验）的基础上</li></ul><h3 id="空间点模式分析篇"><a href="#空间点模式分析篇" class="headerlink" title="空间点模式分析篇"></a>空间点模式分析篇</h3><hr><ol><li>点模式分析方法分为两类：<ul><li>基于密度的方法 –一阶效应（取决于绝对位置）</li><li>基于距离的方法 –二阶效应（取决于相对位置和距离）</li></ul></li><li>某点的密度：该点在单位面积内事件点的数量 / 面积</li><li>若不进行显著性检验进行判断，则只能将当前观测到的频率分布与已知的频率分布做比较，去找显著性差异，从而判断点的分布类型<br>【注】一般将<strong>随机分布模式</strong>作为标准分布模式</li><li>点模式分析用到的方法汇总：<ul><li>样方分析法：<ul><li>样方大小：<code>2A（研究区域的面积） / n（研究区域点的数量）</code></li><li>显著性检验： <ul><li>K-S检验  （复杂）</li><li>方差均值比的开方检验  (比上一种更厉害~)<ul><li>ICS（聚集性指数）<pre><code>ICS = s^2 / m - 1 </code></pre></li><li>结果<ul><li><code>=0</code>: 随机分布</li><li><code>&gt;0</code>: 聚集分布</li><li><code>&lt;0</code>: 均匀分布</li></ul></li></ul></li></ul></li><li>缺点：不能反映样方里点的空间分布信息</li></ul></li><li>核密度估计法：<ul><li>基本思想：任意1个点在任意位置都有一个密度，这个密度是通过对以这个点为中心，指定带宽为半径的范围内事件点数量的统计，然后再除以这个范围的面积得出的结果。<br>这个密度反映了：事件点对该估值点的影响，距离事件点的距离越远，影响越小；反之，影响越大</li><li>带宽确定了，核密度函数的形式对密度估计值影响很小</li></ul></li><li>最近邻距离法–最近邻指数NNI<ul><li>使用每个点的最近邻距离作为判断点分布模式的依据</li></ul></li><li>G函数，F函数<ul><li>使用每个点的最近邻距离的空间分布特征作为判断点分布模式的依据</li><li>通过图像表现分布模式</li></ul></li><li>K函数, L函数<ul><li>使用不同尺度下的最近邻距离作为判断点分布模式的依据</li></ul></li></ul></li></ol><blockquote><p>《空间数据分析》</p><footer><strong>毕硕本, 北京大学出版社</strong><cite><a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.57.7e755c84es2KXy&amp;id=592965905598&amp;ns=1&amp;abbucket=12" target="_blank" rel="noopener">; 购买链接</a></cite></footer></blockquote><blockquote><p>《空间统计实战》</p><footer><strong>肖革新, 科学出版社</strong><cite><a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.32.555719d1CyaGZL&amp;id=571076636661&amp;ns=1&amp;abbucket=12" target="_blank" rel="noopener">; 购买链接</a></cite></footer></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 课程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>自然语言处理学习笔记</title>
+      <link href="/2019/05/05/zi-ran-yu-yan-chu-li-xue-xi-bi-ji/"/>
+      <url>/2019/05/05/zi-ran-yu-yan-chu-li-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="自然语言处理学习笔记"><a href="#自然语言处理学习笔记" class="headerlink" title="自然语言处理学习笔记"></a>自然语言处理学习笔记</h1><h3 id="基础知识篇"><a href="#基础知识篇" class="headerlink" title="基础知识篇"></a>基础知识篇</h3><hr><ol><li>自然语言处理通用流程：<ul><li>文本处理<ul><li>原因：不同的文本来源（web, word, pdf, 语音识别系统, OCR），会在在文本中嵌入了许多其它内容，而这些内容并没有意义，需要去掉</li><li>结果：生成纯文本</li></ul></li><li>特征提取<ul><li>最终使用哪种特征提取方法，取决于要采用哪种模型</li></ul></li><li>建模<ul><li>设计模型（SVM、NN…）</li></ul></li></ul></li><li></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 自然语言处理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>前端学习笔记</title>
+      <link href="/2019/04/30/qian-duan-xue-xi-bi-ji/"/>
+      <url>/2019/04/30/qian-duan-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前端学习笔记"><a href="#前端学习笔记" class="headerlink" title="前端学习笔记"></a>前端学习笔记</h1><hr><ol><li>所有的空格 / 空行都会被浏览器解析为一个空格</li><li>即将被废弃的标签 和 属性：<ul><li><code>&lt;center&gt; &lt;font&gt; &lt;strike&gt; &lt;u&gt;</code></li><li><code>align color bgcolor</code></li></ul></li><li><code>&lt;bdo dir="rtl"&gt;</code>用于定义双向重写，改变文字方向</li><li><code>&lt;code&gt;</code>标签不会输出空格和换行</li><li><code>&lt;var&gt;</code>用于定于数学变量</li><li><code>&lt;a&gt;</code>有两种方式<ul><li>超链接</li><li>锚</li></ul></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LSTM系列神经网络学习笔记</title>
+      <link href="/2019/04/30/lstm-xi-lie-shen-jing-wang-luo-xue-xi-bi-ji/"/>
+      <url>/2019/04/30/lstm-xi-lie-shen-jing-wang-luo-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="RNN系列学习笔记"><a href="#RNN系列学习笔记" class="headerlink" title="RNN系列学习笔记"></a>RNN系列学习笔记</h1><h3 id="LSTM篇"><a href="#LSTM篇" class="headerlink" title="LSTM篇"></a>LSTM篇</h3><hr><ol><li>LSTM（长短期记忆网络），是SimpleRNN的扩展，可以方便地替换掉SimpleRNN</li><li>LSTM中，由上一时间步的隐藏状态 + 单元的内部记忆共同生成当前时间步地隐藏状态</li><li>为了解决梯度消失，引入了输入门i、遗忘门f、输出门o<ul><li>sigmoid函数调节这些门的输入使通过这些门后输出在<strong>0-1之间</strong></li><li>不同门的作用：<ul><li>遗忘门：让前一时间步的部分隐藏状态通过</li><li>输入门：让当前时间步的部分输入值通过</li><li>输出门：让当前时间步的多少的隐藏状态传到下一时间步中</li></ul></li></ul></li><li>当前时间步的单元状态Ct = (C(t-1) * f) + (i * g)</li><li>当前时间步的隐藏状态ht = tanh(Ct) * o</li></ol><h3 id="FC-LSTM篇"><a href="#FC-LSTM篇" class="headerlink" title="FC-LSTM篇"></a>FC-LSTM篇</h3><hr><ol><li><h3 id="GRU篇"><a href="#GRU篇" class="headerlink" title="GRU篇"></a>GRU篇</h3></li></ol><hr><ol><li>GRU（门控循环单元），相比于LSTM，内部<strong>结构简单</strong>，训练速度快，和LSTM一样，都能够替换SimpleRNN单元</li><li>相比于LSTM，引入更新门z、重置门r<ul><li>重置门：将当前时间步的输入与上一时间步的隐藏状态结合</li><li>更新门：让上一时间步的多少的隐藏状态保留下来</li></ul></li><li>当前时间步的隐藏状态ht = (z * c) + ((1 - z) * h(t-1))</li></ol><p>##</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>高效搜索学习笔记</title>
+      <link href="/2019/04/30/gao-xiao-sou-suo-xue-xi-bi-ji/"/>
+      <url>/2019/04/30/gao-xiao-sou-suo-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="高效搜索学习笔记"><a href="#高效搜索学习笔记" class="headerlink" title="高效搜索学习笔记"></a>高效搜索学习笔记</h1><hr><ol><li>信息素养：基于信息解决问题的综合能力和基本素养</li><li>电商网站上有<strong>海量、多种多样、贴近市场与实际、人性化</strong>的信息资源</li><li>网络问答社区：<ul><li>知乎</li><li>quara（美国版知乎）</li></ul></li><li>filetype支持的文件格式：<ul><li>doc</li><li>ppt</li><li>xls</li><li>pdf</li><li>rtf (<strong>Rich Text Format</strong>, 由微软公司开发的跨平台文档格式。大多数的文字处理软件都能读取和保存RTF文档)</li><li>all(以上5种的总和)</li></ul></li><li>外国的百科知识库：<a href="https://www.wikihow.com/Main-Page" target="_blank" rel="noopener">WikiHow</a></li><li><code>"关键词"</code>: 限定关键词不被拆分</li><li><code>intitle:检索词</code>：把检索词限定在搜索结果的标题内，搜索出的结果只在标题中包含<strong>检索词</strong></li><li><code>inurl:url</code>：指定网站的网址</li><li><code>|</code>：<strong>或</strong>的作用</li><li>关键词之间的空格的作用：分别将多个关键词搜出的结果集取<strong>交集</strong>，这样得出的结果包含了所有的关键词</li><li><ul><li>/ -号：</li></ul><ul><li>加号表示搜索结果<strong>必然包含</strong>加号之后的词</li><li>减号表示搜索结果<strong>必然不包含</strong>减号之后的词</li><li>使用示例<pre><code>关键词1 +关键词2  关键词1 -关键词2</code></pre></li></ul></li><li>通配符<code>*</code>：用于代替任何一个关键词</li><li>程序员搜索时用得上的关键字<pre><code>- tutorial - example - tricks - cheatsheet - cookbook - awesome</code></pre></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 高效搜索 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>知识图谱学习笔记</title>
+      <link href="/2019/04/30/zhi-shi-tu-pu-xue-xi-bi-ji/"/>
+      <url>/2019/04/30/zhi-shi-tu-pu-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="知识图谱学习笔记"><a href="#知识图谱学习笔记" class="headerlink" title="知识图谱学习笔记"></a>知识图谱学习笔记</h1><h3 id="基础知识篇"><a href="#基础知识篇" class="headerlink" title="基础知识篇"></a>基础知识篇</h3><hr><ol><li>起源：由Google在2012年提出，目的是为了改进搜索引擎（从<strong>基于关键词</strong>的方式变为<strong>基于语义</strong>的方式）。能够理解用户的意图，查询出更复杂的信息，提升搜索质量。</li><li>特点：对真实世界中客观存在的<strong>实体 / 概念</strong>以及它们之间的<strong>关系</strong>的描述非常强大。<ul><li>不论<em>强关系 / 弱关系</em>都可以通过知识图谱准确地进行描述</li></ul></li><li><h4 id="知识库-Knowledge-Base-简写KB"><a href="#知识库-Knowledge-Base-简写KB" class="headerlink" title="知识库(Knowledge Base, 简写KB):"></a>知识库(Knowledge Base, 简写KB):</h4><ul><li>定义：一条一条地知识堆积在一起形成了知识库</li><li>分类：<ul><li>Curated KBs(基于策划的知识库 / 结构化的维基百科)：从WorldNet、维基百科等知识库中获取大量地<strong>实体和实体关系</strong></li><li>Extrated KBs(基于扩展的知识库)：直接从网页中爬取，从而抽取三元组（此三元组大多数是非结构化的自然语言的形式），此方法获得的数据存在噪声，精确度低于上一种。</li></ul></li><li>【注意】从维基百科 / 百度百科上获取的是非结构化的数据，利于人们理解，不利于计算机处理</li><li>处理过程：<ul><li>综述：对获取到的知识进行简化，使其更有形式，形成三元组</li><li>三元组：<ul><li>结构：(实体entity（或者topic）,实体关系relation,实体entity)</li><li>相当于E-R图</li><li>实体关系有两种：<ul><li><strong>实体-属性间</strong>的关系<ul><li>此关系连接的两个实体，一个是实体，一个是字符串</li><li>【注意】属性通常用字符串表示</li></ul></li><li><strong>实体-实体间</strong>的关系</li></ul></li><li>实体分两种：<ul><li>实体</li><li>属性</li></ul></li></ul></li></ul></li><li>数据结构（对应两种实体关系）：<ul><li>(实体)-[关系]-(实体)</li><li>(实体)-[关系]-(值)</li></ul></li></ul></li><li>应用：<ul><li>知识存储<ul><li>freebase(已经被Google收购)<ul><li>采用结构化数据存储知识，知识是一条一条的，</li><li>结构：<ul><li>topic: 一条条的知识就是一个实体，一个实体具有相应的属性</li><li>type: 多个同类实体组合在一起构成一个类型，<em>同一个类型的实体具有相同的属性</em></li><li>domain: 多个相关的类型组合在一起构成一个域</li></ul></li></ul></li></ul></li><li>数据校验<ul><li>一致性校验</li></ul></li><li>专家系统<ul><li>Watson临床系统<ul><li>特点：对大量非结构化数据进行认知</li><li>功能：从大数据中进行学习，将各知识片连接起来，理解和解决用户问题。</li><li>相关产品：Watson肿瘤治疗（利用专业知识，深度评估、分析病人的具体情况，为临床医师提供治疗方案）</li></ul></li></ul></li><li>智能机器人</li><li>语义搜索<ul><li>优势：基于知识图谱的搜索，是在已有的知识库中进行搜索，能够精准地返回结果（1个 / 几个）</li></ul></li><li>智能推荐系统</li><li>私人助理<ul><li>siri</li><li>微软小娜</li></ul></li></ul></li></ol><h3 id="知识表达系统篇"><a href="#知识表达系统篇" class="headerlink" title="知识表达系统篇"></a>知识表达系统篇</h3><hr><ol><li>三元组<ul><li>实体entity</li><li>类型type：具有相同属性的实体的集合</li><li>域domain：某一领域内所有类型的集合</li><li>属性property</li><li>关系relation</li></ul></li></ol><h3 id="模式（schema）构建篇"><a href="#模式（schema）构建篇" class="headerlink" title="模式（schema）构建篇"></a>模式（schema）构建篇</h3><hr><ol><li>模式schema = 数据模型</li><li>内容包括<strong>概念类型</strong>和<strong>这些类型的属性</strong></li><li>构建模式（导入数据的过程）的步骤：<ul><li>构建域，尽量抽象<ul><li>抽象到什么程度呢？ –&gt; 不要让其继续向上抽象</li></ul></li><li>确定一个域包括哪些类型<ul><li>此时要考虑的问题：<ul><li>核心需求是什么？</li><li>要解决哪些问题？</li><li>为了满足这些需求，需要创造出哪些概念类型？</li></ul></li><li>为了满足这些需求，需要构建一些类型来满足需求</li></ul></li><li>确定类型的属性</li><li>【注意】<ul><li>产品需求决定了模式的构建</li><li>产品应用决定了模式的<strong>整体</strong>构建方式</li></ul></li></ul></li><li>确认模式的构建流程<ul><li>需求划分<ul><li>分类：<ol><li>基础核心需求：系统<strong>最核心</strong>的需求，<em>优先级最高</em></li><li>模式特色需求：图谱能够解决，而其他方法很难解决的需求</li><li>锦上添花需求：加上有好处，不加也可以的需求</li><li>未来扩展需求</li></ol></li></ul></li><li>列出模式第一期、第二期、第三期分别要完成哪些功能</li><li>将产品需求转化成查询结构<ul><li>在每个功能点后面备注查询构建要点</li></ul></li><li>进行开发</li></ul></li><li>构建模式时所需要的数据源的分类：<ul><li>已经清洗好的数据：直接改下数据格式进行导入</li><li>已经清洗好的数据，但有残缺：要进行数据清洗、知识融合（此时很难确定多个数据实际指的是一个数据）</li><li>无数据：要么<strong>购买</strong> / 要么<strong>爬取</strong></li></ul></li><li>图谱的存储方式：<ul><li>2张表（一张存点，一张存边）</li><li>RDF</li></ul></li><li>图谱查询方式：<ul><li>单机查询（适用于实体数量比较少）</li><li>graphX的分布式的存储（适用于实体数量很多）</li></ul></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 自然语言处理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo博客搭建步骤</title>
+      <link href="/2019/04/29/hexo-bo-ke-da-jian-bu-zou/"/>
+      <url>/2019/04/29/hexo-bo-ke-da-jian-bu-zou/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo博客搭建步骤"><a href="#Hexo博客搭建步骤" class="headerlink" title="Hexo博客搭建步骤"></a>Hexo博客搭建步骤</h1><hr><ol><li>注册一个Github账号，<a href="https://github.com" target="_blank" rel="noopener">点击这里注册</a></li><li>新建一个仓库，仓库名称为：<pre><code>GitHub用户名.github.io</code></pre></li><li>安装NodeJS，推荐使用Chocolatey安装<ul><li>命令<pre><code>choco install nodejs</code></pre></li><li>默认安装就好，不需要改动npm缓存位置，改动后会很麻烦！</li><li>【注】也可以在百度上搜索下载nodeJS安装包</li></ul></li><li>安装Git并进行配置<ul><li>命令<pre><code>choco install git</code></pre></li><li>【注】也可以在百度上搜索下载git安装包</li><li>将两个配置文件（以<code>.</code>开头的文件）移动到用户的家目录中，并打开1个新的shell</li><li>配置Git，具体内容如下<pre><code> #### 设置你的 Git 用户名git config --global user.name "&lt;Your-Full-Name&gt;"#### 设置你的 Git 邮箱git config --global user.email "&lt;your-email-address&gt;"#### 确保 Git 输出内容带有颜色标记git config --global color.ui auto#### 对比显示原始状态git config --global merge.conflictstyle diff3git config --list   </code></pre></li><li>将Git与第三方编辑器相结合<pre><code>#### Atom Editor 设置git config --global core.editor "atom --wait"#### Sublime Text 设置git config --global core.editor "'C:/Program Files/Sublime Text 2/sublime_text.exe' -n -w"#### VSCode 设置git config --global core.editor "code --wait"   </code></pre></li></ul></li></ol><blockquote><p>choco命令要在管理员模式的命令行中运行,否则会报错！</p></blockquote><ol start="3"><li>使用<strong>淘宝镜像cnpm</strong>替换自带的npm<ul><li>命令<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org </code></pre></li></ul></li><li>输入以下两个命令安装hexo所需的文件<pre><code>cnpm install -g hexo-clicnpm install hexo --save</code></pre></li><li>输入<code>hexo -v</code>查看Hexo是否安装完成</li><li>在本地新建一个文件夹，名称格式：<code>用户名.github.io</code></li><li>进入该文件夹，输入以下两个命令初始化hexo博客，以及安装相应包<pre><code>hexo initcnpm install</code></pre></li><li>修改博客根目录下的<code>_config.yml</code>文件，要修改的内容如下<pre><code>title: #浏览器导航栏显示的内容subtitle: #网站主标题description: #网站副标题keywords: # 关键词不用写，写了也没用，因为GitHub禁止百度爬虫访问author: #文章作者名字language: zh-CNtimezone: #这里不要改，否则会报错！url: https://GitHub用户名.github.iodeploy:   type: git   repository: https://github.com/GitHub用户名/GitHub用户名.github.io.git   branch: master</code></pre></li><li>可以到<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题</a>下载喜欢的主题，并按照主题教程进行配置</li><li>到<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方API</a>去学习常见写作命令，这里列出一些使用最多的几个命令：<ul><li>hexo clean: 清除<code>public目录</code>和<code>db.json</code></li><li>hexo g: 生成静态网页</li><li>hexo s: 启动本地服务器，默认地址是：<code>http://localhost:4000</code></li><li>hexo d: 部署到Github仓库中</li><li>hexo new post ‘文章名’: 新建一篇文章</li></ul></li><li>在部署的时候，要先安装<code>hexo-deployer-git</code>这个包，否则会报错，输入命令：<pre><code>cnpm install --save hexo-deployer-git</code></pre></li><li>评论系统<a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md" target="_blank" rel="noopener">gitalk</a>开启方法：<ul><li>修改相关参数，注意参数都是<strong>字符串</strong></li></ul></li></ol><blockquote><p>参考文章：<a href="https://www.cnblogs.com/joy99/p/6985456.html" target="_blank" rel="noopener">Hexo安装</a> <a href="https://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像cnpm</a> <a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">ERROR Deployer not found</a> <a href="https://blog.csdn.net/Cirzearchenille/article/details/88802534" target="_blank" rel="noopener">gitalk配置</a></p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hello-world</title>
+      <link href="/2019/04/22/hello-world/"/>
+      <url>/2019/04/22/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>互联网创业大赛参赛指南</title>
+      <link href="/2019/04/03/hu-lian-wang-chuang-ye-da-sai-can-sai-zhi-nan/"/>
+      <url>/2019/04/03/hu-lian-wang-chuang-ye-da-sai-can-sai-zhi-nan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="互联网创业大赛参赛指南"><a href="#互联网创业大赛参赛指南" class="headerlink" title="互联网创业大赛参赛指南"></a>互联网创业大赛参赛指南</h1><h3 id="赛前热身"><a href="#赛前热身" class="headerlink" title="赛前热身"></a>赛前热身</h3><hr><ol><li>重点：<strong>商业性</strong> / <strong>经济效应</strong></li><li>比赛的意义：获得职业能力的提升</li></ol><h3 id="参赛准备"><a href="#参赛准备" class="headerlink" title="参赛准备"></a>参赛准备</h3><hr><ul><li>优秀的参赛作品的基本要素<ul><li>好的项目<ul><li>【痛点】符合市场需求（解决<strong>痛点</strong>）</li><li>【尖叫点】创新性 + 科学性（高大上、深奥）</li><li>【引爆点】应用前景，市场能切入<ul><li>应思考<strong>项目如何能切入市场</strong></li><li>例如：手机业（南京大学）、广告业（东南大学）</li></ul></li><li>【想象空间】市场前景</li><li>【战略规划】可持续发展 + <strong>赢利</strong></li></ul></li><li>好的团队</li></ul></li><li>准备阶段需要做什么？<ul><li>找准<strong>市场需求</strong>，客户痛点，从而选择一个好项目</li><li>创业领域选择（三度交集法）<ul><li>高财富</li><li>高擅长</li><li>高兴趣</li></ul></li><li>组建好团队的标准<ul><li>志同道合（有一个共同的目标）</li><li>情投意合（能做到一起去）</li><li>能力匹配（不同领域的人做不同的事）</li><li>【注】团队组建在总分值中有40分（如何考核呢？考核的标准是什么？）<ul><li>基于<strong>项目需求</strong>的人力规划 / 岗位设计</li><li>基于<strong>创业需求</strong>的能力匹配（不同的人对应不同的岗位）</li><li>基于<strong>企业发展规划</strong>的激励设计</li></ul></li></ul></li><li>研发好的产品（好产品的标准是什么？）<ul><li>国际 / 国家专利</li><li>软件著作权</li><li>学术论文</li><li>科研成果鉴定（<em>四川省科技厅</em>负责）</li><li>专业赛事大奖</li><li>使用证明 / 委托开发文件 / 销售合同</li><li>【注】最好有<code>1-2个</code></li></ul></li></ul></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 互联网+ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>考研数学导学课学习感悟</title>
+      <link href="/2019/03/30/kao-yan-shu-xue-dao-xue-ke-xue-xi-gan-wu/"/>
+      <url>/2019/03/30/kao-yan-shu-xue-dao-xue-ke-xue-xi-gan-wu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="考研数学导学课学习感悟"><a href="#考研数学导学课学习感悟" class="headerlink" title="考研数学导学课学习感悟"></a>考研数学导学课学习感悟</h1><h2 id="备考阶段划分"><a href="#备考阶段划分" class="headerlink" title="备考阶段划分"></a>备考阶段划分</h2><hr><ol><li><h4 id="基础阶段"><a href="#基础阶段" class="headerlink" title="基础阶段"></a>基础阶段</h4><ul><li>时间：<code>2018.9.25-2019.7.1</code></li><li>复习内容：定理 + 公式<ul><li>一定要<strong>全面</strong></li></ul></li><li>参考书<ul><li>《数学考试大纲》</li><li>一些教材<ul><li>高等数学(同济第6、7版)</li><li>线性代数<ul><li>同济第6、7版</li><li>清华大学 居易马 编写</li></ul></li><li>概率论(浙江大学 编写)</li></ul></li><li>配套的辅导教材<ul><li>《考研数学基础教程》</li></ul></li></ul></li><li>【附】概念复习时的注意事项<ul><li>语言上能够叙述，并能将其翻译成数学表达式</li><li>了解数学含义、几何意义、物理意义（数1、数2）、经济含义（数3）</li><li>和其他概念间的关系</li><li>对于<strong>概念、公式、定理、法则</strong><ul><li>先记<strong>条件</strong>，再记<strong>结论</strong></li><li>重要的概念，一定要会证明</li></ul></li><li>题型安排<ul><li>例题</li><li>每节课后习题的<strong>1 / 2</strong></li><li>总习题中的所有题</li><li>典型习题</li><li>《基础过关660》上的题</li></ul></li></ul></li></ul></li><li><h4 id="强化阶段"><a href="#强化阶段" class="headerlink" title="强化阶段"></a>强化阶段</h4><ul><li>时间：<code>2019.7-2019.8</code></li><li>参考书：配套讲义</li><li>上课流程：<ul><li>基础知识串讲1小时</li><li>讲解3-5类的题型</li><li>每类题型讲3-5个例题</li><li>讲题的过程：<ul><li><em>切入点 -&gt; 错误 -&gt; 总结</em></li></ul></li></ul></li></ul></li><li><h4 id="模考冲刺阶段"><a href="#模考冲刺阶段" class="headerlink" title="模考冲刺阶段"></a>模考冲刺阶段</h4><ul><li>时间：<code>2019.9.1-2019.12</code></li><li>题型安排<ul><li>暑假期间每类题型对应例题的<strong>1 / 2</strong></li><li>10月初，必须开始做某一类型的<strong>15年以来的真题</strong></li><li>8套模考试卷</li></ul></li><li>参考书<ul><li>《考研数学历年真题解析》</li></ul></li></ul></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 考研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>四六级听力训练四步法学习感悟</title>
+      <link href="/2019/03/30/si-liu-ji-ting-li-xun-lian-si-bu-fa-xue-xi-gan-wu/"/>
+      <url>/2019/03/30/si-liu-ji-ting-li-xun-lian-si-bu-fa-xue-xi-gan-wu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="四六级听力训练四步法"><a href="#四六级听力训练四步法" class="headerlink" title="四六级听力训练四步法"></a>四六级听力训练四步法</h1><hr><ol><li>做题<ul><li>放音之前留<code>3分钟</code>阅读选项与原文，勾画<strong>动词、名词、形容词、比较级、最高级</strong></li><li>放音时一气呵成，不要停顿</li></ul></li><li>确认答案，查阅词语（<strong>查</strong>）<ul><li>将<strong>选项和原文</strong>的陌生词语全部查出，并积累有关的<strong>同义替换</strong></li></ul></li><li><h3 id="翻译选项-译"><a href="#翻译选项-译" class="headerlink" title="翻译选项(译)"></a>翻译选项(<strong>译</strong>)</h3><ul><li>用<strong>视译</strong>的方式翻译选项和原文，能否明白其含义</li></ul></li><li><h3 id="跟读原文-读"><a href="#跟读原文-读" class="headerlink" title="跟读原文(读)"></a>跟读原文(<strong>读</strong>)</h3><ul><li>放音并跟读<code>3-5遍</code>，模仿并纠正自己的发音</li><li>可以不完全跟上说话者的速度</li></ul></li><li>裸听原文(<strong>听</strong>)<ul><li>在不看原文的情况下，仅凭耳朵就能听懂所有细节</li><li>如果不能听懂全部内容，听懂正确选项对应的答案句即可</li><li>标准：词词清晰</li></ul></li></ol><blockquote><p>附：相信自己一定可以听懂听力！</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 听力 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>鞋类产品保养学习感悟</title>
+      <link href="/2019/03/24/xie-lei-chan-pin-bao-yang-xue-xi-gan-wu/"/>
+      <url>/2019/03/24/xie-lei-chan-pin-bao-yang-xue-xi-gan-wu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="鞋类产品保养学习感悟"><a href="#鞋类产品保养学习感悟" class="headerlink" title="鞋类产品保养学习感悟"></a>鞋类产品保养学习感悟</h1><hr><ul><li><p>选购建议</p><ul><li>种类说明<ul><li>休闲鞋、硫化鞋、凉鞋、拖鞋不适合剧烈运动</li><li>慢跑鞋、走路鞋不适合篮球、足球等剧烈活动</li><li>室内运动鞋应用于室内</li></ul></li><li>选购方法<ul><li>试鞋时，应<strong>站立并双脚着地，以脚趾能上下活动</strong>为宜</li></ul></li></ul></li><li><p>日常保养</p><ul><li><p>定期清洁鞋子</p><ul><li>对于<em>鞋面</em>，用棉布沾水轻轻擦，<strong>切勿猛刷</strong></li><li>对于<em>清洗</em>，<code>浸泡时间&lt;= 20min</code>,<code>洗涤温度 &lt;= 45°</code></li><li>对于<em>晾晒</em>，应放在阴凉通风处，<strong>避免阳光直射</strong></li><li>对于<em>中底</em>，<strong>普通污渍</strong>用橡皮擦，<strong>顽固污渍</strong>用软毛 + </li><li>对于<em>外底</em>，及时清理沙石等杂物，用<strong>硬毛刷 + 中性洗涤剂</strong>清洗</li></ul></li><li><p>不要长期穿同一双鞋子</p></li><li><p>鞋被雨水打湿后，应及时用<strong>干布吸干</strong>并放在<strong>通风处</strong>吹干</p></li><li><p>鞋应避免接触酸、碱、油<strong>腐蚀物</strong></p></li><li><p>运动鞋适用的温度范围：<code>-20°~45°</code></p></li><li><p>鞋存放前，应<strong>清洗干净</strong>，再放于<strong>阴凉通风</strong>处存放</p></li><li><p>对于<em>底部有透气窗的鞋</em>，应避免在雨天穿</p></li><li><p>对于<em>小白鞋</em>，应在清洗后用<strong>白纸裹住</strong>晾晒</p></li><li><p>对于<em>鞋上的工艺</em>，不要用硬毛刷清洗，防止脱落</p></li><li><p><strong>休闲鞋、板鞋</strong>不适合刷洗、机洗</p></li><li><p>对于<em>真皮皮鞋</em>，普通污渍 / 灰尘，应先用湿布擦，再用皮革护理剂擦；若打湿，应及时吹干</p></li><li><p>对于<em>反绒皮的鞋</em>，普通污渍 / 灰尘，应用<strong>软毛刷</strong>去除；可适当使用反绒皮护理剂，保护本色</p></li><li><p>对于<em>合成革的鞋</em>，普通污渍 / 灰尘，应先用湿布擦；顽固污渍，可使用中性洗涤剂</p></li></ul></li><li><p>鞋的护理工具</p><ul><li>软毛刷</li><li>反绒皮护理剂</li><li>皮革护理剂</li><li>棉布</li><li>海绵</li><li>防潮纸 / 干燥剂</li><li>白色纸巾</li></ul></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 家居 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>劳动合同法学习感悟</title>
+      <link href="/2019/03/24/lao-dong-he-tong-fa-xue-xi-gan-wu/"/>
+      <url>/2019/03/24/lao-dong-he-tong-fa-xue-xi-gan-wu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="劳动合同法学习感悟"><a href="#劳动合同法学习感悟" class="headerlink" title="劳动合同法学习感悟"></a>劳动合同法学习感悟</h1><hr><ol><li>劳动合同法适用人群：<ul><li>企业</li><li>个体户</li><li>非企业单位</li><li>与劳动者建立劳动关系的单位</li></ul></li><li>劳动规章制度合法有效的条件：经过民主程序公示，并告知劳动者</li><li><strong>工会</strong>的作用：帮助劳动者签订劳动合同，指导用人单位履行劳动合同，维护劳动者合法权益</li><li>用人单位自<strong>用工之日</strong>起就与劳动者建立了劳动关系</li><li>用人单位在建立劳动关系过程中应该建立<strong>职工名册</strong></li><li>用人单位招收劳动者，不能收取劳动者押金</li><li>用人单位应在<strong>用工前 / 用工之日 / 用工之日起一个月内</strong>与劳动者签订劳动合同</li><li>劳动合同的类型<ul><li>固定期限</li><li>无固定期限</li><li>以完成一定任务为期限</li></ul></li><li>订立无固定期限劳动合同的情况：<ul><li>劳动者连续工作满10年</li><li>在企业初次实行劳动合同制 / 国有企业改制 的条件下，劳动者连续工作满10年且距退休不足10年</li><li>连续两次订立劳动合同后的续订</li></ul></li><li>用人单位<strong>满1年</strong>不与劳动者订立书面劳动合同 / <strong>超过1个月且不满1年</strong>，视为已经订立无固定期限劳动合同。后者用人单位在这段时间内须向劳动者每月支付二倍工资</li><li>劳动合同不满3个月，不得约定试用期</li><li>试用期最长不超过6个月</li><li>试用期时间划分：<ul><li><code>3个月 &lt;= time &lt; 1年</code> ：1个月</li><li><code>1年 &lt;= time &lt; 3年</code> ：2个月</li><li><code>&gt;= 3年</code> ：6个月</li></ul></li><li>试用期工资不得低于劳动合同约定工资的<strong>80%</strong></li><li>用人单位可以将下列人员列为<strong>竞业受限人员</strong>：<ul><li>高级管理人员</li><li>高级技术人员</li><li>负有保密义务的人员</li></ul></li><li>用人单位可以与劳动者约定由劳动者承担违约金的情况<ul><li>用人单位提供培训，并约定服务期</li><li>用人单位与负有保密义务的劳动者签订有竞业限制条款</li></ul></li><li>劳动合同无效的情况：<ul><li>采用<strong>欺诈、胁迫</strong>的手段</li><li>用人单位免除自己的法定责任，去除劳动者权利</li><li>违反<strong>法律</strong>规定</li></ul></li><li>当用人单位发生分立、合并时，原劳动合同继续有效，由<strong>继承原单位权利与义务的新用人单位</strong>继续履行</li><li>劳动者<strong>提前30日</strong>（试用期为提前3天）向用人单位提出书面解除劳动合同，用人单位无需支付经济补偿金</li><li>劳动者患病在医疗期满后不能继续在该单位工作，用人单位应<strong>提前30日书面通知 / 支付1个月工资</strong>后解除劳动合同</li><li>劳动者患病，在医疗期内劳动合同到期，劳动合同则应<strong>延续</strong>到医疗期满后再终止</li><li><strong>经济补偿</strong>支付标准（以工作年限为标准）<ul><li><code>&gt;= 1年</code> ：支付1个月工资</li><li><code>6个月 &lt;= time &lt; 1年</code> ：同上</li><li><code>&lt; 6个月</code> ：支付半个月工资</li></ul></li><li>劳动者可以不通知用人单位<strong>立即解除劳动合同</strong>的情况<ul><li>用人单位违规指挥，危害劳动者人身健康</li><li>用人单位以暴力、非法手段胁迫劳动者进行劳动</li></ul></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 法律 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MarkDown学习笔记</title>
+      <link href="/2019/03/20/markdown-xue-xi-bi-ji/"/>
+      <url>/2019/03/20/markdown-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><hr><ol><li>文本加粗：<strong>内容</strong></li><li>文本倾斜：<em>内容</em></li><li>代码标记 : <code>内容</code></li><li>标题：# content<br>【注】h1-h6: #-######</li><li>HTML 在 Markdown 中仍然有效</li><li>Markdown 本身无法像 HTML 文档一样在浏览器中打开</li><li>预览 Markdown 文件: Dillinger（<a href="https://dillinger.io/）" target="_blank" rel="noopener">https://dillinger.io/）</a></li><li>删除线：<del>content</del></li><li>引用文本：&gt;content</li><li>引用代码,显示在一个区域：<code>content</code></li><li>创建链接：[ 要连接的文本 ] ( URL )</li><li>创建无序列表：- content或者 * content</li><li>创建有序列表：1.content</li><li>创建嵌套列表：- content</li><li>content</li><li>content</li><li>任务列表（包含选框的选项）：- [ ] content</li><li>创建emoji : 使用 : emojicode :<br>   具体的emoji代码可见：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webfx.com/tools/emoji-cheat-sheet/</a></li><li>创建一个表：使用 | 分列； 使用 – 分行</li><li>@组织名/团队名：可将通知发送给他们</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>收藏的网站整理</title>
+      <link href="/2019/03/17/shou-cang-de-wang-zhan-zheng-li/"/>
+      <url>/2019/03/17/shou-cang-de-wang-zhan-zheng-li/</url>
+      
+        <content type="html"><![CDATA[<h1 id="收藏网站整理"><a href="#收藏网站整理" class="headerlink" title="收藏网站整理"></a>收藏网站整理</h1><h2 id="Markdown类"><a href="#Markdown类" class="headerlink" title="Markdown类"></a>Markdown类</h2><hr><ul><li><a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="noopener">Markdown-GitHub官网</a></li><li><a href="https://help.github.com/en/articles/basic-writing-and-formatting-syntax" target="_blank" rel="noopener">Github flavored Markdown Syntax</a></li><li><a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">Markdown可用到的一些表情符号</a></li></ul><h2 id="GitHub类"><a href="#GitHub类" class="headerlink" title="GitHub类"></a>GitHub类</h2><hr><ul><li><a href="https://help.github.com/en/articles/connecting-to-github-with-ssh" target="_blank" rel="noopener">通过SSH连接Github的注意事项</a></li><li><a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-%E9%85%8D%E7%BD%AE-Git" target="_blank" rel="noopener">Git安装后的官方推荐的配置</a></li><li><a href="https://git-scm.com/book/zh/v2/Git-%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86-%E5%BA%95%E5%B1%82%E5%91%BD%E4%BB%A4%E5%92%8C%E9%AB%98%E5%B1%82%E5%91%BD%E4%BB%A4" target="_blank" rel="noopener">Git原理讲述</a></li></ul><h2 id="学习类"><a href="#学习类" class="headerlink" title="学习类"></a>学习类</h2><hr><ul><li><a href="http://www.doyoudo.com/" target="_blank" rel="noopener">doyoudo</a></li><li><a href="https://linuxsurvival.com/" target="_blank" rel="noopener">Linux模拟终端</a></li><li><a href="http://www.wordreference.com/" target="_blank" rel="noopener">英语在线词典（多释义）</a></li><li><a href="https://www.futurelearn.com/" target="_blank" rel="noopener">在线讲座(欧洲)</a></li><li><a href="http://www.51sjsj.com/" target="_blank" rel="noopener">设计师之家</a></li></ul><h2 id="备用搜索引擎类"><a href="#备用搜索引擎类" class="headerlink" title="备用搜索引擎类"></a>备用搜索引擎类</h2><hr><ul><li><a href="https://s.geekbang.org/" target="_blank" rel="noopener">程序员的搜索引擎</a></li><li><a href="http://lackar.com/aa/" target="_blank" rel="noopener">Anywhere</a></li></ul><h2 id="法律类"><a href="#法律类" class="headerlink" title="法律类"></a>法律类</h2><hr><ul><li><a href="https://www.jufaanli.com/" target="_blank" rel="noopener">法律案例</a></li></ul><h2 id="设计类"><a href="#设计类" class="headerlink" title="设计类"></a>设计类</h2><hr><ul><li><a href="http://www.68design.net/cool/" target="_blank" rel="noopener">设计界面</a></li><li><a href="http://cool.mfdemo.cn/" target="_blank" rel="noopener">设计界面</a></li><li><a href="https://www.blakeallendesign.com/" target="_blank" rel="noopener">设计音乐</a></li><li><a href="https://smartmockups.com/" target="_blank" rel="noopener">样机下载Smartmockups</a></li><li><a href="https://www.freepik.com/" target="_blank" rel="noopener">样机下载Freepik</a></li><li><a href="http://www.51yuansu.com/" target="_blank" rel="noopener">觅元素</a></li></ul><h2 id="激活码类"><a href="#激活码类" class="headerlink" title="激活码类"></a>激活码类</h2><hr><ul><li><a href="http://www.youserials.com/" target="_blank" rel="noopener">获取激活码_1</a></li><li><a href="https://www.serials.ws/" target="_blank" rel="noopener">获取激活码_2</a></li></ul><h2 id="评估类"><a href="#评估类" class="headerlink" title="评估类"></a>评估类</h2><hr><ul><li><a href="http://howmuchtomakeanapp.com/" target="_blank" rel="noopener">评估APP价值</a></li></ul><h2 id="在线工具类"><a href="#在线工具类" class="headerlink" title="在线工具类"></a>在线工具类</h2><hr><ul><li><a href="http://www.polaxiong.com/web/0" target="_blank" rel="noopener">泼辣修图</a></li><li><a href="https://www.photopea.com/" target="_blank" rel="noopener">在线PS</a></li><li><a href="http://www.uupoop.com/" target="_blank" rel="noopener">ps在线版 Photoshop在线精简版</a></li><li><a href="https://www.gaoding.com/" target="_blank" rel="noopener">在线抠图软件</a></li><li><a href="https://tinypng.com/" target="_blank" rel="noopener">压缩图片</a></li><li><a href="https://www.tuhaokuai.com/" target="_blank" rel="noopener">图片压缩，在线图片压缩，GIF压缩</a></li><li><a href="https://tool.gifhome.com/" target="_blank" rel="noopener">GIF在线压缩</a></li><li><a href="http://gifcompressor.com/zh/" target="_blank" rel="noopener">GIF在线压缩2</a></li><li><a href="http://www.screentogif.com/" target="_blank" rel="noopener">GIF制作-ScreenToGif</a></li><li><a href="http://www.nicetool.net/app/gif_maker.html" target="_blank" rel="noopener">在线gif制作工具</a>  (收费)</li><li><a href="http://xiuxiu.web.meitu.com/" target="_blank" rel="noopener">美图秀秀网页版</a></li><li><a href="https://photomosh.com/" target="_blank" rel="noopener">故障文字生成器</a></li><li><a href="http://weavesilk.com/" target="_blank" rel="noopener">炫光生成器</a></li><li><a href="https://codepen.io/pissang/full/geajpX" target="_blank" rel="noopener">梯度波浪生成器</a> (收费！)</li><li><a href="https://codepen.io/Yakudoo/full/rJjOJx" target="_blank" rel="noopener">奇幻波浪生成器</a></li><li><a href="https://demo.marpi.pl/biomes/" target="_blank" rel="noopener">山脉生成器</a></li><li><a href="https://demo.marpi.pl/" target="_blank" rel="noopener">三维动画生成器</a></li><li><a href="https://pissang.github.io/voxelize-image/" target="_blank" rel="noopener">层叠样式生成器</a></li><li><a href="https://pissang.github.io/papercut-box-art/" target="_blank" rel="noopener">Paper Cut Art Generator</a></li><li><a href="https://wangyasai.github.io/Stars-Emmision/" target="_blank" rel="noopener">群星闪烁生成器</a></li><li><a href="http://www.decrooks.com/" target="_blank" rel="noopener">David Crooks</a></li><li><a href="http://planetmaker.wthr.us/" target="_blank" rel="noopener">行星生成器</a></li><li><a href="https://earth.nullschool.net/" target="_blank" rel="noopener">地球环境生成器</a></li><li><a href="https://gradient.shapefactory.co/" target="_blank" rel="noopener">渐变生成器Chromatic Gradient Generator</a></li><li><a href="https://codepen.io/tsuhre/full/BYbjyg" target="_blank" rel="noopener">炫光生成器</a></li><li><a href="http://www.shejidaren.com/examples/tools/low-poly/" target="_blank" rel="noopener">低多边形(Low Poly)在线生成工具</a></li><li><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">纹理生成器</a></li><li><a href="http://david.li/fluid/" target="_blank" rel="noopener">粒子生成器</a></li><li><a href="https://pixelmap.amcharts.com/" target="_blank" rel="noopener">矢量地图生成器</a></li><li><a href="https://www.processon.com/" target="_blank" rel="noopener">ProcessOn - 免费在线作图</a></li><li><a href="http://yinzhang.388g.com/" target="_blank" rel="noopener">在线印章制作</a></li><li><a href="http://www.zhenhaotv.com/" target="_blank" rel="noopener">毛笔字在线生成器</a></li><li><a href="http://zhitu.isux.us/" target="_blank" rel="noopener">智图_图片压缩在线工具</a></li><li><a href="https://img.top/" target="_blank" rel="noopener">img.top 智能在线图像压缩</a></li><li><a href="https://www.jpeg.io/" target="_blank" rel="noopener">图像格式转换</a></li><li><a href="https://www.smartresize.com/zh-cn" target="_blank" rel="noopener">在线批量裁剪图片工具</a></li><li><a href="http://www.makepic.com/print.php" target="_blank" rel="noopener">个性签名印章工具</a></li><li><a href="https://29a.ch/film-emulator/" target="_blank" rel="noopener">在线图片滤镜处理Free Online Analog Film Emulator</a></li><li><a href="https://codebeautify.org/" target="_blank" rel="noopener">在线格式转换工具</a></li><li><a href="https://www.designevo.com/" target="_blank" rel="noopener">免费logo制作</a></li><li></li></ul><h2 id="图标下载类"><a href="#图标下载类" class="headerlink" title="图标下载类"></a>图标下载类</h2><hr><ul><li><a href="https://iconmonstr.com/" target="_blank" rel="noopener">iconmonstr</a></li><li><a href="https://illustrio.com/" target="_blank" rel="noopener">illustrio</a> (登陆)</li><li><a href="https://zh-cn.silhouette-ac.com/" target="_blank" rel="noopener">免费矢量剪影 | silhouetteAC</a> (收费)</li><li><a href="https://www.flaticon.com/" target="_blank" rel="noopener">flaticon</a></li><li><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">free and premium vector icons</a></li><li><a href="http://www.stickpng.com/" target="_blank" rel="noopener">Free Transparent PNG Images</a></li><li><a href="http://instantlogosearch.com/" target="_blank" rel="noopener">Instant Logo Search</a></li><li><a href="http://ico.58pic.com/tubiaodaquan/" target="_blank" rel="noopener">图标宝</a></li><li><a href="http://pictogram2.com/" target="_blank" rel="noopener">绿色小人图标引擎</a></li><li><a href="http://www.easyicon.net/" target="_blank" rel="noopener">EASYICON</a></li></ul><h2 id="图片下载类"><a href="#图片下载类" class="headerlink" title="图片下载类"></a>图片下载类</h2><hr><ul><li><a href="http://spaceengine.org/" target="_blank" rel="noopener">Space Engine</a></li><li><a href="https://gratisography.com/" target="_blank" rel="noopener">创意图片Gratisography</a></li><li><a href="https://www.ssyer.com/" target="_blank" rel="noopener">免费背景图片素材</a></li><li><a href="https://500px.com/" target="_blank" rel="noopener">最出色的摄影社区 / 500px</a></li><li><a href="https://duotone.shapefactory.co/" target="_blank" rel="noopener">单色图片</a></li><li><a href="https://1x.com/photos" target="_blank" rel="noopener">1x - Latest additions</a></li><li><a href="https://www.everypixel.com/" target="_blank" rel="noopener">Stock Image Search Engine </a></li><li><a href="https://alpha.wallhaven.cc/" target="_blank" rel="noopener">Awesome Wallpapers</a></li><li><a href="https://free3d.com/" target="_blank" rel="noopener">3D Models for Free</a></li><li><a href="https://pixabay.com/" target="_blank" rel="noopener">Pixabay</a></li></ul><h2 id="地图下载类"><a href="#地图下载类" class="headerlink" title="地图下载类"></a>地图下载类</h2><hr><ul><li><a href="https://freevectormaps.com/" target="_blank" rel="noopener">Free Vector Maps</a></li><li>[]</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 优秀网站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>挑战杯比赛详情</title>
+      <link href="/2019/03/13/tiao-zhan-bei-bi-sai-xiang-qing/"/>
+      <url>/2019/03/13/tiao-zhan-bei-bi-sai-xiang-qing/</url>
+      
+        <content type="html"><![CDATA[<h1 id="挑战杯比赛相关问题"><a href="#挑战杯比赛相关问题" class="headerlink" title="挑战杯比赛相关问题"></a>挑战杯比赛相关问题</h1><hr><ol><li>挑战杯（奇年）；创青春（偶年）</li><li>科技制作的分类：<ul><li>A类：投入大</li><li>B类：投入小，如：小发明</li></ul></li><li>时间安排：<ul><li>校赛：10月-次年1月 / 2月</li><li>省赛：5月</li><li>国赛：11月</li></ul></li><li>个人作品：申报人负责的部分在作品的创作中占比60%+</li><li>赛事分组：本科生组、研究生组、博士生组</li><li>评分重点：<ul><li>科技类作品：<ul><li>A类：<ol><li>重大科研项目</li><li>处于国内领先水平</li><li>能支撑社会问题的解决</li><li>未来能大规模生产</li></ol></li><li>B类：<ol><li>实用</li><li>核心技术能延伸到其他领域</li><li>能产生经济效益</li></ol></li></ul></li><li>自然学科论文   (&lt;= 8000)：<ol><li>注意选题</li><li>理论交叉</li><li>对已有理论的科学质疑</li><li>数据 + 图表</li></ol></li><li>社会科学调查报告   (&lt;= 15000)：<ol><li>注意选题 </li><li>选择国家最关注的问题<ul><li>推荐：19大报告、政府工作报告、中央相关文件</li></ul></li><li>研究的领域是国家迫切需要的</li><li>具有新视角</li><li>样本要有代表性（调研要有痕迹）</li></ol></li></ul></li><li>参赛技巧：<ul><li>选题：热点中的难题（如：重大项目的子课题、国家媒体热炒的问题）<ul><li>【注】要有特色、区域产业、区域文化</li></ul></li><li>如何选项目：有用 + <strong>政策</strong>支持 + 能落地 + 能<strong>商业化</strong> + 能扩展 + 有核心优势</li><li>项目命名的原则：<strong>先大</strong>（大领域）<strong>后小</strong>（小对象）</li><li>写文案应以评委为中心</li><li>研究应具有唯一性</li></ul></li><li>失败的原因：<ol><li>内容局限</li><li>相关性研究太多</li><li>样本太小</li></ol></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 比赛 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>互联网与商业模式创新学习感悟</title>
+      <link href="/2019/03/12/hu-lian-wang-yu-shang-ye-mo-shi-chuang-xin-xue-xi-gan-wu/"/>
+      <url>/2019/03/12/hu-lian-wang-yu-shang-ye-mo-shi-chuang-xin-xue-xi-gan-wu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="互联网-与商业模式创新学习感悟"><a href="#互联网-与商业模式创新学习感悟" class="headerlink" title="互联网+与商业模式创新学习感悟"></a>互联网+与商业模式创新学习感悟</h1><hr><ol><li>电子商务的<strong>三大模式</strong>:<ul><li>B2B</li><li>B2C</li><li>C2C</li></ul></li><li>新浪的收入的70%来自于广告</li><li><strong>技术</strong>在不断地迎合市场的<strong>需求</strong></li><li>按照目前的趋势，电子商务的市场仍会继续向前发展</li><li>电子商务的<strong>特点</strong>：<ul><li>全球化</li><li>要求企业提升其生产规模</li><li>市场规模不可估量</li><li>快速、效率高</li></ul></li><li>在传统企业中，电子商务部取缔了市场营销部</li><li>电子商务的定义：通过互联网等信息网络<strong>销售商品</strong>和<strong>提供服务</strong>的经营活动</li><li>电子商务生态圈：核心层-&gt;衍生层-&gt;服务层</li><li><strong>O2O</strong>(online to off): 线上转变到线下，线下转变到线上</li><li>线上 + 线下一起发展，比较成熟的企业是<strong>京东</strong></li><li>传统企业依据<strong>自身的优势</strong>打造自己的电子商务模式，有可能打破传统电商平台的垄断</li><li>市场 = 人数 + 购买力</li><li>目前，国内90%+的网民都是移动互联网用户</li><li>CNNIC每半年都会出一份中国的互联网报告</li><li><strong>短视频</strong>已经成为电商界最重要的引流方式之一</li><li><code>互联网+</code>的定义：以互联网为主导，去影响其他的产业</li><li><strong>产业互联网</strong>：（产业 + 互联网）互联网跟着传统企业走</li><li></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 互联网+ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网络推广实战学习感悟</title>
+      <link href="/2019/03/11/wang-luo-tui-guang-shi-zhan-xue-xi-gan-wu/"/>
+      <url>/2019/03/11/wang-luo-tui-guang-shi-zhan-xue-xi-gan-wu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="网络推广实战学习感悟"><a href="#网络推广实战学习感悟" class="headerlink" title="网络推广实战学习感悟"></a>网络推广实战学习感悟</h1><hr><ol><li>任何自然界的事物都遵循正态分布，除去前面的10%、后面的10%，中间80%占绝大多数，这也称作<strong>帕累托定理</strong>（二八法则）</li><li>推广的时候要注意我们的<strong>消费群体</strong>喜欢什么<em>样式</em></li><li>不同的群体一定有不同的需求</li><li>推广的目的：激发购物者的<strong>欲望</strong>，而不是打压它</li><li>欲望的深渊是没有底线的</li><li>不同的渠道有不同的推广方式</li><li>根据不同的消费者的购物行为确定推广方案</li><li>营销推广要说什么？<ul><li><strong>品牌信息</strong></li><li><strong>产品信息</strong></li><li>活动信息</li><li>关系维护（评价 + 维护）</li></ul></li><li>一个产品，要针对不同的消费群体，才能激发起他们的相应的购买欲望</li><li>营销推广的途径<ul><li>线上推广（微博、微信、博客、新闻、BBS、SNS、百科、视频推广、网络广告推广、电子邮件营销、淘宝推广）</li></ul></li><li>营销方式：事件、品牌、活动</li><li>常见的推广方法：<ul><li>搜索引擎</li><li>论坛</li><li>博客</li><li>网络广告</li><li>网络的新闻和事件</li></ul></li><li><strong>微信推广</strong>的优势：<ul><li>熟人网络，小用户群体</li><li>随时随地都能提供信息服务</li><li>营销和服务定位精准</li><li>富媒体，便于分享</li><li>微信公众号：方便、快捷</li></ul></li><li>推广方案的5要素：<ul><li>推广目的</li><li>推广方法</li><li>推广预算</li><li>人员安排</li><li>预期时间</li></ul></li><li>定位：产品定位 + 用户定位</li><li>推广的借助点：<ul><li>借势3.15 </li><li>直播、关注度</li><li>提升品牌形象</li><li>占领行业高端</li></ul></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 互联网+ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日常阅读好句收集</title>
+      <link href="/2019/03/10/ri-chang-yue-du-hao-ju-shou-ji/"/>
+      <url>/2019/03/10/ri-chang-yue-du-hao-ju-shou-ji/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>如果你想拥有你从未有过的东西，那么你必须去做你从未做过的事情。</p><footer><strong>佩塞斯基安</strong></footer></blockquote><ol><li><strong>尊重</strong>身体释放情绪的节奏。</li><li><strong>示弱</strong>是情感关系里的润滑剂</li><li><strong>请求</strong>是给对方机会表达他的爱</li><li>一个请求就是送出来的一份礼物，给了自己和对方贡献自己美好的机会。</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 好句 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>哈佛学霸的学习方法总结</title>
+      <link href="/2019/03/10/ha-fo-xue-ba-de-xue-xi-fang-fa-zong-jie/"/>
+      <url>/2019/03/10/ha-fo-xue-ba-de-xue-xi-fang-fa-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="哈佛学霸的学习方法总结"><a href="#哈佛学霸的学习方法总结" class="headerlink" title="哈佛学霸的学习方法总结"></a>哈佛学霸的学习方法总结</h1><h3 id="记忆篇"><a href="#记忆篇" class="headerlink" title="记忆篇"></a>记忆篇</h3><hr><ol><li>方法：<ul><li>缩略词记忆</li><li>联想记忆</li><li>故事记忆<h3 id="笔记篇"><a href="#笔记篇" class="headerlink" title="笔记篇"></a>笔记篇</h3></li></ul></li></ol><hr><ul><li>康奈尔笔记法（笔记示意如图）</li><li>关键词笔记法（笔记示意如图）<h3 id="写作篇"><a href="#写作篇" class="headerlink" title="写作篇"></a>写作篇</h3></li></ul><hr><ul><li>一边阅读，一边思考</li><li>建立<strong>素材与灵感本</strong>，将每天时刻产生的灵感都记录下来</li><li>定期、定时、定字数、定主题地经常练笔</li><li>避免流水账的方法：在下笔前确定文章<strong>中心思想</strong></li><li>口头作文：边听边说有助于积累写作素材</li><li>用手机录下<strong>此时此刻自己想说的话</strong>，都可以作为后期写作的素材</li><li>提高文章的<strong>质量</strong>：<ul><li>可信度（事实、数据、名人名言） </li><li>情感 </li><li>逻辑</li></ul></li><li><strong>提纲</strong>的内容：<ul><li>题目 </li><li>主要内容和中心思想 </li><li>文章结构如何安排？</li></ul></li></ul><h3 id="科学减压篇"><a href="#科学减压篇" class="headerlink" title="科学减压篇"></a>科学减压篇</h3><hr><ul><li>面对压力，给予自己积极的心理暗示</li><li>多说鼓励自己的话</li><li>将一些积极心理暗示的话用彩色便签纸贴在桌子、柜子上提醒自己</li><li>熬夜前一定要做以下这些准备<ol><li>600ml的温开水</li><li>苹果/香蕉</li><li>积极的暗示</li></ol></li></ul><h3 id="沟通篇"><a href="#沟通篇" class="headerlink" title="沟通篇"></a>沟通篇</h3><hr><ul><li>如果连与老师沟通的桥梁都不去建立，那么就会阻断老师了解你的途径</li><li><strong>切记：老师只是帮助你提高成绩的工具，扮演着提高自己成绩的角色</strong></li><li>问老师问题时要准备以下这些东西：<ol><li>小本子<ul><li>自己的疑惑（不懂的问题 + 知识点 + 逻辑混乱的地方 + 问题来源）</li><li>老师的解答（需要用到的知识点 + 解题逻辑）</li></ul></li><li>小凳子</li><li>一支笔</li></ol></li><li>问完问题后，请老师评估自己，看自己还有哪些知识盲点没有掌握</li></ul><h3 id="课前预习和课后复习篇"><a href="#课前预习和课后复习篇" class="headerlink" title="课前预习和课后复习篇"></a>课前预习和课后复习篇</h3><hr><ul><li>预习在做作业和复习之后进行，因为新知识是旧知识的延续</li><li>每次预习在<strong>15分钟内</strong></li><li>复习分4轮：<ol><li>小复习（每堂课后）</li><li>中复习（每周）</li><li>大复习（每月）</li><li>考前复习</li></ol></li><li>复习要准备的东西<ol><li>错题本</li><li>习题</li><li>之前的真题 + 模拟题</li></ol></li></ul><h3 id="逻辑思维篇"><a href="#逻辑思维篇" class="headerlink" title="逻辑思维篇"></a>逻辑思维篇</h3><hr><ol><li>成绩差距的背后是每个知识点隐藏的思维方式</li><li>培养逻辑思维的方法：<ul><li>鱼骨图分析法<ol><li>核心：明确问题是什么？原因是什么？目标是什么？</li><li>方法：问题作为<strong>鱼尾</strong>，原因作为<strong>鱼骨</strong>，目标作为<strong>鱼头</strong></li></ol></li><li>麦肯锡7步分析法：<ol><li>步骤：问题是什么？–&gt; 分析问题 –&gt; 去除非关键的问题 –&gt; 制定工作计划 –&gt; 开始分析 –&gt; 解读分析结果 –&gt; 总结</li></ol></li></ul></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习方法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python常见问题汇总</title>
+      <link href="/2019/03/10/python-chang-jian-wen-ti-hui-zong/"/>
+      <url>/2019/03/10/python-chang-jian-wen-ti-hui-zong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="python常见问题汇总"><a href="#python常见问题汇总" class="headerlink" title="python常见问题汇总"></a>python常见问题汇总</h2><hr><ul><li>numpy中的两种矩阵乘法<ol><li>np.multiply()和a * b：对应元素相乘</li><li>np.dot(a, b)：矩阵乘法</li></ol></li><li>为矩阵添加一列值：使用<strong>np.column_stack(a, b)</strong>这个函数，让两个矩阵各取第一个组成新矩阵的一行</li><li>np.transpose()：高阶矩阵的转置</li><li>np.row_stack((a, b))：将a作为第一行，b作为第二行</li><li>np.ones((a,b)):生成a x b的矩阵</li><li></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>R语言学习心得</title>
+      <link href="/2019/03/10/r-yu-yan-xue-xi-xin-de/"/>
+      <url>/2019/03/10/r-yu-yan-xue-xi-xin-de/</url>
+      
+        <content type="html"><![CDATA[<h1 id="R语言学习心得"><a href="#R语言学习心得" class="headerlink" title="R语言学习心得"></a>R语言学习心得</h1><h2 id="包的使用"><a href="#包的使用" class="headerlink" title="包的使用"></a>包的使用</h2><hr><ol><li>安装包的方式：<ul><li>GUI安装</li><li>使用命令install.package(“包名”)</li></ul></li><li>包的卸载：remove.package(“包名”)</li><li>包的加载：<ul><li>library（包名）</li><li>require（包名）：成功时返回true，失败时返回false<ul><li>require中可以开启quietly参数，隐藏加载时的提示信息</li></ul></li><li>【注】有无引号无区别</li></ul></li><li>取消包的加载：<ul><li>GUI界面清除该包前的复选框</li><li>detach（”package:包名”）</li></ul></li><li>如果加载的两个包中，有同名的函数，若不指定是哪个包中的，则默认该函数是最后一个被加载的包中的函数</li><li>使用<strong>::</strong>指定该函数是在哪个包中</li><li>查看当前加载的包：search()</li></ol><h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><hr><ol><li><strong>&gt;</strong>：命令提示符</li><li>变量的赋值的三种方式：<ul><li><strong>&lt;-</strong>  （<strong>推荐！</strong>）</li><li><strong>=</strong></li><li><strong>assign(“变量名”，变量值)</strong></li></ul></li><li>变量命名规则：数字 / 字母 / 句号 / 下划线<ul><li>必须用字母开头</li></ul></li><li>remove(变量名), 简写rm()</li><li>gc(): 用于释放操作系统不同的存储空间，回收垃圾</li><li>R语言会自动回收垃圾</li><li>R语言<strong>区分大小写</strong></li><li>R语言的数据类型<ul><li>数值型（正、负的整数和小数）<ul><li>这里有一个<strong>整数型</strong>，在整数后加一个<strong>L</strong>，以和数值进行区分</li></ul></li><li>字符型<ul><li>字符型变量：输出时有引号</li><li>因子型变量：输出时无引号，还有一个水平数（不重复的元素）<ul><li>levels按<strong>字典序</strong>排列</li></ul></li><li>获取字符 / 数值的长度使用<strong>nchar(变量)</strong></li></ul></li><li>日期型<ul><li>Date:存储日期</li><li>POSIXct:存储日期和时间</li><li>lubrate 和 chron包处理日期时间上很方便</li></ul></li><li>逻辑型</li></ul></li><li>判断类型用<strong>is</strong>,转换类型用<strong>as</strong></li><li>向量的元素都是同一类型</li><li>对向量的操作会自动应用到向量的每一个分量</li><li>创建向量的方式是combine（简写c）或者 x:y (生成[x,y]之间的数字)</li><li>当处理两个不等长的向量时，较短的向量会循环补齐（循环重复），但前提是长向量的长度是短向量的整数倍，否则会有<strong>警告</strong></li><li>注释的方法：行首前加 <strong>#</strong></li><li>all():检查所有元素是否全为true；any():检查所有元素中至少一个为true</li><li>获取向量中的元素用<strong>变量名[序号]</strong><ul><li>注：序号还可以用向量表示；序号从<strong>1</strong>开始</li></ul></li><li><strong>names(变量名)</strong>：查看或分配该变量中元素的名字</li><li>查看函数的帮助文档：<code>? 函数名</code></li><li>查看运算符的帮助文档：<code>? '运算符'</code></li><li><code>apropos("函数名称的一部分")</code>：用来查找函数</li><li>两种缺失数据：<ul><li>NA：要存储</li><li>NULL：不存储</li></ul></li><li><strong>data.frame</strong>由向量组成</li><li>nrow():获取行数；ncol():获取列数；dim():获取行数和列数</li><li>list():创建列表，元素可以是数值、字符、数据框、列表</li><li>利用vector（mode=”list”, length=?）创建具有一定长度的空列表</li><li>通过<code>[[序号]]</code>访问列表中的一个元素</li><li>矩阵做加、减、乘、除运算，都是将对应元素做运算</li><li>矩阵乘（%*%）</li><li><strong>rownames,colnames,names</strong>适用于矩阵、数据框，其中names = colnames</li><li>letters和LETTERS：存放小写和大写字母的列表</li><li>t():矩阵的转置</li><li>数组的创建：</li><li>矩阵元素默认是按照<strong>列</strong>排列的</li></ol><h2 id="数据的导入"><a href="#数据的导入" class="headerlink" title="数据的导入"></a>数据的导入</h2><hr><ol><li>导入CSV文件<ul><li>CSV文件：是一个以<code>,</code>作为分隔符的文本文件</li><li>使用read.table()函数，返回一个数据框</li><li>使用方法：</li><li>stringAsFactors参数（默认为TRUE），开启后会自动将字符型变量转为因子型变量，也可用于数据框的创建。设置为FALSE会减少运算时间</li><li>若单元格中已经存在分隔符，应该使用<code>read.csv2()</code>函数读入数据</li></ul></li><li>导入数据库数据<ul><li>安装RODBC包</li><li>使用步骤：<ul><li>使用odbcConnect()创建一个连接</li><li>使用sqlQuery(连接对象，”sql语句”), 返回一个数据框</li><li>【注】一次只能打开一个连接，打开第二个时，第一个会退出</li></ul></li></ul></li><li>.RData文件<ul><li>创建文件：<strong>save(要保存的对象，file=位置)</strong></li><li>加载文件：<strong>load(“文件的路径”)</strong></li></ul></li><li>使用在包中的数据：在引入包后，使用<strong>data(数据对象名)</strong>导入数据<ul><li>【注】data():会返回可用的数据列表</li></ul></li><li>导入网页表格中的数据<ul><li>使用readHTMLTable(url, header=?, which=?, stringAsFactors=?)</li><li>【注】其中：which指定读取哪个表格</li></ul></li></ol><h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><hr><ol><li>数据框取子集：<strong>subset</strong>(data.frame, data.frame$columnName operator “expression”)</li><li>写CSV文件：write.csv(data.frame, “fileName”)</li><li>为矩阵赋行名：<strong>rownames()</strong>; 赋列名：<strong>colnames()</strong></li><li>R语言对大小写敏感</li><li>删除变量就是将其赋值为NULL</li><li></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> R语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数码摄影与后期制作学习心得</title>
+      <link href="/2019/03/10/shu-ma-she-ying-yu-hou-qi-zhi-zuo-xue-xi-xin-de/"/>
+      <url>/2019/03/10/shu-ma-she-ying-yu-hou-qi-zhi-zuo-xue-xi-xin-de/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Photoshop基本操作"><a href="#Photoshop基本操作" class="headerlink" title="Photoshop基本操作"></a>Photoshop基本操作</h2><hr><ol><li>适用于打印的像素：300px; 适用于电脑显示的像素：72px</li><li>选区后，右键点击“<strong>变换选区</strong>”，修改选区大小</li><li><strong>Ctrl+J</strong> = Ctrl+C + Ctrl+V(需要手动新建图层)</li><li>快速调整颜色的方法<ul><li>使用<strong>套索工具</strong>框选物体，打开“<strong>色相/饱和度</strong>”对话框（Ctrl+U），调整色相、饱和度、明度</li></ul></li><li>取消选区（Ctrl+D）</li><li>影响魔术棒选区的因素：<strong>容差</strong>和<strong>连续</strong></li><li>容差值越大，选择的相似区域也就越多</li><li>按<strong>中括号键</strong>可以放大/缩小笔触</li><li>反选（Ctrl+shift+I）</li><li>使用通道技术抠出发丝：<ul><li>先选择一个黑白分明的通道</li><li>用<strong>魔术棒</strong>选择背景</li><li>去掉头发边缘部分</li><li>反选，选框选上了人物</li><li>人物填充上黑色</li><li>反向，背景变成黑色，人物和发丝变成白色</li><li>在框选发丝，使用<strong>曲线 / 色阶</strong>工具让发丝变白<ul><li>因为载入通道选区会选择白色的部分</li></ul></li><li>点击<strong>载入通道选区</strong>，即完成选区选择</li></ul></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>半月板损伤康复训练法</title>
+      <link href="/2019/03/10/ban-yue-ban-sun-shang-kang-fu-xun-lian-fa/"/>
+      <url>/2019/03/10/ban-yue-ban-sun-shang-kang-fu-xun-lian-fa/</url>
+      
+        <content type="html"><![CDATA[<h2 id="半月板损伤康复训练—学习心得"><a href="#半月板损伤康复训练—学习心得" class="headerlink" title="半月板损伤康复训练—学习心得"></a>半月板损伤康复训练—学习心得</h2><hr><ol><li>坚持每天两次用热盐水热敷膝盖20分钟，促进膝盖周围的血液循环</li><li>锻炼股四头肌，方法是：坐位抬腿（身体坐直，然后把腿水平抬起，脚尖上钩，保持15秒，放下休息15秒后，再重复此动作，一天做30-50组）</li><li>单膝站立，俯身摸物</li><li>每天按摩膝盖周围的穴位<ul><li>揉痛点，用食指、中指揉痛点由轻至重20次，由重至轻20次。促进痛点炎症吸收</li><li>犊鼻穴：外侧凹陷处</li><li>膝眼穴（两个，分内外）：上面的骨头的凹陷处</li><li>委中穴：膝盖里侧横纹的中点<ul><li>【注】这3个增加关节内血液供应和润滑液的分泌</li></ul></li><li>血海穴：五指按住膝盖，大拇指下方为血海穴</li><li>梁丘穴：膝盖骨右侧隔3个手指的上方<ul><li>【注】这2个穴位增加股四头肌血液供应</li></ul></li><li>【注】各穴位每天按揉1分钟</li></ul></li><li>半月板相应的论文文献：<ul><li><a href="http://www.lib.cuit.edu.cn/asset/detail.aspx?id=20410495584" target="_blank" rel="noopener">论文1</a></li><li><a href="http://www.lib.cuit.edu.cn/asset/detail.aspx?id=20422998436" target="_blank" rel="noopener">论文2</a></li><li><a href="http://www.lib.cuit.edu.cn/asset/detail.aspx?id=20425849385" target="_blank" rel="noopener">论文3</a></li></ul></li></ol><blockquote><p>作者：Clement-阿五</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 半月板 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HBase学习心得</title>
+      <link href="/2019/03/10/hbase-xue-xi-xin-de/"/>
+      <url>/2019/03/10/hbase-xue-xi-xin-de/</url>
+      
+        <content type="html"><![CDATA[<h2 id="HBase学习心得"><a href="#HBase学习心得" class="headerlink" title="HBase学习心得"></a>HBase学习心得</h2><hr><ol><li>HBase表的一个单元格默认只有一个版本，修改单元格的内容后，之前的内容版本会被打上删除标记，此时不会真正的被删除，在<strong>region合并</strong>时才会真正地被删除</li><li>删除表时要先禁用表</li><li><strong>alter表</strong>时可以不禁用表，但推荐禁用表，因为安全性，防止多个人同时在修改 / 查看表</li><li>期末要考的过滤器部分：<ul><li>valuefilter的那些值</li><li>多个filter的联合使用</li><li>Qualiferfilter</li><li>Familyfilter</li><li>Rowfilter</li></ul></li><li>hbase查出的结果集是一个个的单元格，一行就是一个单元格</li><li>[STARTROW , STOPROW)</li><li>出现在<strong>过滤器</strong>中的一些符号：<ul><li>运算符（=, &gt;, &gt;=, &lt;, &lt;=, !=）</li><li>运算器<ul><li>binary:全匹配</li><li>substring：取字串</li><li>binaryPrefix：匹配前缀</li><li>bit: 按位进行或 / 异或进行匹配</li><li>Regex：正则表达式进行匹配</li></ul></li></ul></li><li>ValueFilter(=,’substring:111’)：筛选出单元格值包含111的单元格</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> HBase </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Flutter安装心得</title>
+      <link href="/2019/03/10/flutter-an-zhuang-xin-de/"/>
+      <url>/2019/03/10/flutter-an-zhuang-xin-de/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Flutter安装心得"><a href="#Flutter安装心得" class="headerlink" title="Flutter安装心得"></a>Flutter安装心得</h2><hr><ol><li>刚开始从<a href="https://flutterchina.club/" target="_blank" rel="noopener">flutter中文官网</a>上提供的下载方式下载flutter安装包，运行flutter控制台报错，后来直接克隆<a href="https://github.com/flutter/flutter" target="_blank" rel="noopener">flutter的GitHub仓库</a>就没问题了</li><li>安装Android SDK时建议到<a href="https://www.androiddevtools.cn/" target="_blank" rel="noopener">Android中文网站</a>下载<strong>Android Studio</strong>和<strong>Android SDK</strong><blockquote><p>参考教程：<a href="https://blog.csdn.net/qq_36577136/article/details/80632674" target="_blank" rel="noopener">2018年Android SDK下载安装及配置教程</a></p></blockquote></li><li>安装SDK时发现<strong>inter x86 emulator accelerator(HAXM installer)</strong>这个包无法安装，提示不能在这台电脑上编译，后来在<a href="https://github.com/intel/haxm/releases" target="_blank" rel="noopener">Intel的GitHub仓库</a>里找到对应的版本下载并手动安装<blockquote><p>参考教程：<a href="https://blog.csdn.net/swimming_in_IT_/article/details/77773999" target="_blank" rel="noopener">inter x86 emulator accelerator</a><br><a href="https://blog.csdn.net/Adonis_D_Gogh/article/details/76694212" target="_blank" rel="noopener">HAXM installer NOT compatible with windows 的解决方法</a></p></blockquote></li><li>装好SDK后，运行<strong>flutter doctor</strong>又提示<em>安卓许可证无法获取</em>，建议更新SDK。更新时提示<strong>Failed to move away or delete existing target file E:\androidSDK\sdk\tools</strong>,又更改tools目录的名字，改为tool，再次运行<strong>sdkmanager –update</strong>命令，出现<em>done</em>之后，将tools目录的内容拷贝到tool目录并选择全部替换，最后将tool目录名改成tools，再执行命令<strong>flutter doctor –android-licenses</strong>,一路的y<blockquote><p>参考教程：<br><a href="https://www.jianshu.com/p/d2a0a1c39728" target="_blank" rel="noopener">我的Flutter初体验——如何成功配置</a><br><a href="https://blog.csdn.net/liy010/article/details/82078484" target="_blank" rel="noopener">配置flutter 遇到的问题及解决办法</a></p></blockquote></li></ol><blockquote><p>作者：Clement-阿五</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Flutter </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>考研英语导学课</title>
+      <link href="/2019/03/07/kao-yan-ying-yu-dao-xue-ke/"/>
+      <url>/2019/03/07/kao-yan-ying-yu-dao-xue-ke/</url>
+      
+        <content type="html"><![CDATA[<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ol><li>分数是75+的学生在研究生期间可以免修英语</li><li>复习的重心：阅读（40）+ 写作（35）</li><li>现阶段做94-05年的真题</li><li>单词（5500）的等级<ul><li>超纲词（300-500）</li><li>核心词（4000）</li><li>基础词（1000）：P340+ （一个月内)</li></ul></li><li>注意<strong>熟词生义</strong></li><li>记单词可以采用<strong>引申记忆</strong></li><li>记单词分3遍：<ul><li>第一遍：使用<strong>词根</strong> + <strong>词缀</strong></li><li>第二遍：记同/近义词</li><li>第三遍：在阅读中记单词</li></ul></li><li>复习时间规划：<ul><li>基础阶段（现在-19.06）<ul><li>复习内容：词汇 + 语法 + 长难句</li></ul></li><li>强化阶段（19.07-19.08）<ul><li>复习内容：阅读技巧</li></ul></li><li>巩固阶段（19.09-19.10）<ul><li>复习内容：阅读 + 翻译 + 写作</li></ul></li><li>冲刺阶段（19.11-19.12）</li></ul></li><li>前缀定方向，后缀定词性</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 考研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>每日Java学习_002</title>
+      <link href="/2019/02/19/mei-ri-java-xue-xi-002/"/>
+      <url>/2019/02/19/mei-ri-java-xue-xi-002/</url>
+      
+        <content type="html"><![CDATA[<h1 id="cookie、Session、Token的辨析"><a href="#cookie、Session、Token的辨析" class="headerlink" title="cookie、Session、Token的辨析"></a>cookie、Session、Token的辨析</h1><ul><li><p>Cookie</p><ol><li>定义：是存储在用户计算机浏览器目录上用来保持<strong>Web浏览状态</strong>的文本文件。</li><li>作用：识别用户的唯一身份</li><li>时效性：有非持久性性Cookie（有一个规定时间，保存在内存中，关闭浏览器消失），也有持久性Cookie（保存在硬盘中，关闭浏览器后不消失）</li><li>使用限制：在第一次Http请求时就要进行设置</li><li>执行流程图：</li><li>【推荐】<strong>OKHttp框架</strong>：它会在创建OKHttpClient实例时，设置CookieJar / 拦截器<em>自动</em>管理Cookie<blockquote><p><code>一个浏览器最多创建300个Cookie，每个不超过4KB。 一个Web站点最多创建20个Cookie</code></p></blockquote></li></ol></li><li><p>Session</p><ol><li>定义：在服务器端生成并保存，用于标志客户端连接的一种文件，在一次Http请求时会发给客户端，保存为临时性Cookie。在第二次Http请求时携带上这个Cookie，与服务器端的做比对，就可以解决Http协议的无连接问题了</li></ol></li><li><p>Token（令牌）</p><ol><li>定义：用户身份验证的方式</li><li>组成：uid + time + sign</li><li>使用规则：在第一次登陆成功后，服务器端会生成一个Token，并在一次Http请求中发给客户端，保存在客户端中。当客户端再次请求时，将保存在本地的Token发给服务器，与服务器的Token进行比对。此时会有3种结果<ul><li>相同：保持登陆状态</li><li>没有：未登陆成功</li><li>不同：登陆失效了</li></ul></li></ol></li></ul><img src="/2019/02/19/mei-ri-java-xue-xi-002/2.jpg" class=""><blockquote><p>作者：Clement-阿五 </p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>每日Java学习_001</title>
+      <link href="/2019/02/18/mei-ri-java-xue-xi-001/"/>
+      <url>/2019/02/18/mei-ri-java-xue-xi-001/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Intelli的高效使用——模板补全"><a href="#Intelli的高效使用——模板补全" class="headerlink" title="Intelli的高效使用——模板补全"></a>Intelli的高效使用——模板补全</h1><blockquote><p><code>所有快捷方式的格式均为标识符.xxx（xxx可由后面的单词替换)</code></p></blockquote><ul><li><p><strong>var</strong>快速写完声明变量语句</p></li><li><p><strong>null</strong>快速写完判空语句</p></li><li><p><strong>notnull</strong>快速写完非判空语句</p></li><li><p><strong>nn</strong>(同notnull)</p></li><li><p><strong>for</strong>快速生成循环语句（foreach格式）</p></li><li><p><strong>fori</strong>快速生成循环语句（for经典语句）</p></li><li><p><strong>not</strong>快速生成取反语句</p></li><li><p><strong>if</strong>快速生成判断语句<br><code>注意：使用**if**的格式：条件.if</code></p></li><li><p><strong>cast</strong>快速生成强制转换语句</p></li><li><p><strong>return</strong>快速生成返回值语句</p></li></ul><img src="/2019/02/18/mei-ri-java-xue-xi-001/1.jpg" class=""><blockquote><p>作者：Clement-阿五 </p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
