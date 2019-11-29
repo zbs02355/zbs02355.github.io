@@ -5,14 +5,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="MarkDown学习笔记, Clement-阿五(专栏)">
-    <meta name="description" content="Markdown语法
+    <meta name="description" content="Markdown学习笔记
+这是之前我学习Markdown时所记录的关键笔记，写在这里，便于以后查阅
+Clement-阿五
 
-文本加粗：内容
-文本倾斜：内容
-代码标记 : 内容
-标题：# content【注】h1-h6: #-######
-HTML 在 Markdown 中仍然有效
-Markdown 本身无法像 HTML 文档一样在浏览器中">
+
+文本加粗： **内容**
+	
+文本倾斜： _内容_
+	
+代码标记 : `内容`
+	
+标题： # content
+#">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -421,12 +426,25 @@ Markdown 本身无法像 HTML 文档一样在浏览器中">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/MarkDown/">
+                                <span class="chip bg-color">MarkDown</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/" class="post-category">
+                                工具类
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -441,7 +459,7 @@ Markdown 本身无法像 HTML 文档一样在浏览器中">
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        236
+                        311
                     </div>
                     
 
@@ -464,28 +482,95 @@ Markdown 本身无法像 HTML 文档一样在浏览器中">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><hr>
+                <h2 id="Markdown学习笔记"><a href="#Markdown学习笔记" class="headerlink" title="Markdown学习笔记"></a>Markdown学习笔记</h2><hr>
+<blockquote><p>这是之前我学习Markdown时所记录的关键笔记，写在这里，便于以后查阅</p>
+<footer><strong>Clement-阿五</strong></footer></blockquote>
+
 <ol>
-<li>文本加粗：<strong>内容</strong></li>
-<li>文本倾斜：<em>内容</em></li>
-<li>代码标记 : <code>内容</code></li>
-<li>标题：# content<br>【注】h1-h6: #-######</li>
+<li>文本加粗： <pre><code>**内容**
+	</code></pre></li>
+<li>文本倾斜： <pre><code>_内容_
+	</code></pre></li>
+<li>代码标记 : <pre><code>`内容`
+	</code></pre></li>
+<li>标题： <pre><code># content
+## content
+### content
+#### content
+##### content
+###### content
+
+【注】h1-h6: #-######
+	</code></pre></li>
 <li>HTML 在 Markdown 中仍然有效</li>
 <li>Markdown 本身无法像 HTML 文档一样在浏览器中打开</li>
 <li>预览 Markdown 文件: Dillinger（<a href="https://dillinger.io/）" target="_blank" rel="noopener">https://dillinger.io/）</a></li>
-<li>删除线：<del>content</del></li>
-<li>引用文本：&gt;content</li>
-<li>引用代码,显示在一个区域：<code>content</code></li>
-<li>创建链接：[ 要连接的文本 ] ( URL )</li>
-<li>创建无序列表：- content或者 * content</li>
-<li>创建有序列表：1.content</li>
-<li>创建嵌套列表：- content</li>
-<li>content</li>
-<li>content</li>
-<li>任务列表（包含选框的选项）：- [ ] content</li>
-<li>创建emoji : 使用 : emojicode :<br>   具体的emoji代码可见：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webfx.com/tools/emoji-cheat-sheet/</a></li>
-<li>创建一个表：使用 | 分列； 使用 – 分行</li>
-<li>@组织名/团队名：可将通知发送给他们</li>
+<li>删除线： <pre><code>~~content~~
+	</code></pre></li>
+<li>引用文本： <pre><code>&gt; content
+	</code></pre></li>
+<li>引用代码,显示在一个区域：<pre><code>```content```
+	</code></pre></li>
+<li>创建链接：<pre><code>[ 要连接的文本 ] ( URL )
+	</code></pre></li>
+<li>创建无序列表：<pre><code>- content
+- content
+- content
+    .
+	.
+	.
+
+----------------
+
+* content
+* content
+* content
+    .
+	.
+	.
+
+	</code></pre></li>
+<li>创建有序列表：<pre><code>1.content
+2.content
+3.content
+    .
+	.
+	.
+	</code></pre></li>
+<li>创建嵌套列表：<pre><code>- content
+   1. content
+   2. content
+	</code></pre></li>
+<li>任务列表（包含选框的选项）：<pre><code>- [ ] content
+	</code></pre></li>
+<li>创建emoji : <pre><code>:emojicode: 
+	</code></pre>
+
+</li>
+</ol>
+<blockquote>
+<p>具体的emoji代码可见：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">emoji表情代码</a></p>
+</blockquote>
+<ol start="17">
+<li>创建一个表：<pre><code>使用 | 分列； 使用 – 将表头与表体分离
+
+apple | banana | orange
+------|--------|-------
+a | b | c 
+a | s | d 
+q | w | e 
+
+	</code></pre>
+
+</li>
+</ol>
+<blockquote>
+<p>对齐方式：<br>左对齐 <code>:|</code><br>右对齐 <code>|:</code><br>中对齐 <code>:|:</code></p>
+</blockquote>
+<ol start="18">
+<li>将通知发送给某个团队 / 组织：<pre><code>@组织名/团队名
+	</code></pre>
+</li>
 </ol>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -991,7 +1076,7 @@ Git安装
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.1k</span>&nbsp;字
+                class="white-color">17.5k</span>&nbsp;字
             
             
             

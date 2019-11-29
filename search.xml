@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>7月8日实习问题总结</title>
+      <link href="/2019/11/29/7-yue-8-ri-shi-xi-wen-ti-zong-jie/"/>
+      <url>/2019/11/29/7-yue-8-ri-shi-xi-wen-ti-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<h3 id="实习遇到的问题"><a href="#实习遇到的问题" class="headerlink" title="实习遇到的问题"></a>实习遇到的问题</h3><hr><blockquote><p>这是之前我参加学院组织的毕业实习所遇到的问题，写在这里，便于以后查阅。</p><footer><strong>Clement-阿五</strong></footer></blockquote><ol><li>数据库插入中文异常<ul><li>问题分析：是连接数据库时的字符编码出现了问题，导致无法插入中文字符，如图1-1所示<img src="/2019/11/29/7-yue-8-ri-shi-xi-wen-ti-zong-jie/p2-1.PNG" class="">图1-1 插入中文异常 </li><li>解决方案：通过查阅相关文章，我们发现：这是编码格式错误导致的问题，可在连接数据库的时指定字符编码格式，在URL的末尾处加上<code>jdbc:mysql://127.0.0.1:3306/newsdatabase?characterEncoding=UTF-8</code>。之后，在向数据库中插入中文数据时。可正常显示，如图<img src="/2019/11/29/7-yue-8-ri-shi-xi-wen-ti-zong-jie/p2-2.PNG" class="">图1-2 解决后的效果</li></ul></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Photoshop2015安装教程</title>
+      <link href="/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/"/>
+      <url>/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Photoshop2015安装教程"><a href="#Photoshop2015安装教程" class="headerlink" title="Photoshop2015安装教程"></a>Photoshop2015安装教程</h1><hr><blockquote><p>这是之前我安装和配置Photoshop的步骤，写在这里，便于以后查阅</p><footer><strong>Clement-阿五</strong></footer></blockquote><blockquote><p>系统环境：Windows10<br>  Photoshop版本：2015</p></blockquote><ol><li>首先断网</li><li>启动安装程序，并点击忽略，如图<img src="/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/p1.PNG" class=""></li><li>点击<strong>试用</strong>，如图<img src="/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/p2.PNG" class=""></li><li>点击<strong>登录</strong>-&gt;<strong>以后登录</strong>，如图<img src="/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/p3.PNG" class=""><img src="/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/p4.PNG" class=""></li><li>选择安装位置，开始安装，如图<img src="/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/p5.PNG" class=""></li><li>安装完成，如图<img src="/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/p6.PNG" class=""></li><li>使用激活工具进行破解，即可完成</li></ol><blockquote><p>参考文章：<a href="https://jingyan.baidu.com/article/47a29f248faaaec015239947.html" target="_blank" rel="noopener">Photoshop cc2015 安装及破解教程</a></p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 配置类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JNDI学习笔记</title>
       <link href="/2019/07/12/jndi-xue-xi-bi-ji/"/>
       <url>/2019/07/12/jndi-xue-xi-bi-ji/</url>
@@ -461,9 +499,21 @@
       <link href="/2019/03/20/markdown-xue-xi-bi-ji/"/>
       <url>/2019/03/20/markdown-xue-xi-bi-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><hr><ol><li>文本加粗：<strong>内容</strong></li><li>文本倾斜：<em>内容</em></li><li>代码标记 : <code>内容</code></li><li>标题：# content<br>【注】h1-h6: #-######</li><li>HTML 在 Markdown 中仍然有效</li><li>Markdown 本身无法像 HTML 文档一样在浏览器中打开</li><li>预览 Markdown 文件: Dillinger（<a href="https://dillinger.io/）" target="_blank" rel="noopener">https://dillinger.io/）</a></li><li>删除线：<del>content</del></li><li>引用文本：&gt;content</li><li>引用代码,显示在一个区域：<code>content</code></li><li>创建链接：[ 要连接的文本 ] ( URL )</li><li>创建无序列表：- content或者 * content</li><li>创建有序列表：1.content</li><li>创建嵌套列表：- content</li><li>content</li><li>content</li><li>任务列表（包含选框的选项）：- [ ] content</li><li>创建emoji : 使用 : emojicode :<br>   具体的emoji代码可见：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webfx.com/tools/emoji-cheat-sheet/</a></li><li>创建一个表：使用 | 分列； 使用 – 分行</li><li>@组织名/团队名：可将通知发送给他们</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h2 id="Markdown学习笔记"><a href="#Markdown学习笔记" class="headerlink" title="Markdown学习笔记"></a>Markdown学习笔记</h2><hr><blockquote><p>这是之前我学习Markdown时所记录的关键笔记，写在这里，便于以后查阅</p><footer><strong>Clement-阿五</strong></footer></blockquote><ol><li>文本加粗： <pre><code>**内容**</code></pre></li><li>文本倾斜： <pre><code>_内容_</code></pre></li><li>代码标记 : <pre><code>`内容`</code></pre></li><li>标题： <pre><code># content## content### content#### content##### content###### content【注】h1-h6: #-######</code></pre></li><li>HTML 在 Markdown 中仍然有效</li><li>Markdown 本身无法像 HTML 文档一样在浏览器中打开</li><li>预览 Markdown 文件: Dillinger（<a href="https://dillinger.io/）" target="_blank" rel="noopener">https://dillinger.io/）</a></li><li>删除线： <pre><code>~~content~~</code></pre></li><li>引用文本： <pre><code>&gt; content</code></pre></li><li>引用代码,显示在一个区域：<pre><code>```content```</code></pre></li><li>创建链接：<pre><code>[ 要连接的文本 ] ( URL )</code></pre></li><li>创建无序列表：<pre><code>- content- content- content    ...----------------* content* content* content    ...</code></pre></li><li>创建有序列表：<pre><code>1.content2.content3.content    ...</code></pre></li><li>创建嵌套列表：<pre><code>- content   1. content   2. content</code></pre></li><li>任务列表（包含选框的选项）：<pre><code>- [ ] content</code></pre></li><li>创建emoji : <pre><code>:emojicode: </code></pre></li></ol><blockquote><p>具体的emoji代码可见：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">emoji表情代码</a></p></blockquote><ol start="17"><li>创建一个表：<pre><code>使用 | 分列； 使用 – 将表头与表体分离apple | banana | orange------|--------|-------a | b | c a | s | d q | w | e </code></pre></li></ol><blockquote><p>对齐方式：<br>左对齐 <code>:|</code><br>右对齐 <code>|:</code><br>中对齐 <code>:|:</code></p></blockquote><ol start="18"><li>将通知发送给某个团队 / 组织：<pre><code>@组织名/团队名</code></pre></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 工具类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MarkDown </tag>
+            
+        </tags>
       
     </entry>
     
