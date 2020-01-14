@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.clementblog.tech/"/>
-  <updated>2019-11-29T15:23:59.898Z</updated>
+  <updated>2020-01-14T02:28:36.353Z</updated>
   <id>https://www.clementblog.tech/</id>
   
   <author>
@@ -17,11 +17,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>WampServer3.0安装步骤</title>
+    <link href="https://www.clementblog.tech/2020/01/14/wampserver3-0-an-zhuang-bu-zou/"/>
+    <id>https://www.clementblog.tech/2020/01/14/wampserver3-0-an-zhuang-bu-zou/</id>
+    <published>2020-01-14T02:13:03.000Z</published>
+    <updated>2020-01-14T02:28:36.353Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;WampServer3-0安装步骤&quot;&gt;&lt;a href=&quot;#WampServer3-0安装步骤&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="配置类" scheme="https://www.clementblog.tech/categories/%E9%85%8D%E7%BD%AE%E7%B1%BB/"/>
+    
+    
+      <category term="毕业设计" scheme="https://www.clementblog.tech/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>毕业设计指导讲座笔记</title>
+    <link href="https://www.clementblog.tech/2020/01/11/bi-ye-she-ji-zhi-dao-jiang-zuo-bi-ji/"/>
+    <id>https://www.clementblog.tech/2020/01/11/bi-ye-she-ji-zhi-dao-jiang-zuo-bi-ji/</id>
+    <published>2020-01-11T07:50:33.000Z</published>
+    <updated>2020-01-14T02:32:05.954Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;毕业设计指导讲座笔记&quot;&gt;&lt;a href=&quot;#毕业设计指导讲座笔记&quot; class=&quot;headerlink&quot; title=&quot;毕业设计指导讲座笔记&quot;&gt;&lt;/a&gt;毕业设计指导讲座笔记&lt;/h1&gt;&lt;h3 id=&quot;毕业论文概述篇&quot;&gt;&lt;a href=&quot;#毕业论文概述篇&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="专业类" scheme="https://www.clementblog.tech/categories/%E4%B8%93%E4%B8%9A%E7%B1%BB/"/>
+    
+    
+      <category term="毕业设计" scheme="https://www.clementblog.tech/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>7月8日实习问题总结</title>
     <link href="https://www.clementblog.tech/2019/11/29/7-yue-8-ri-shi-xi-wen-ti-zong-jie/"/>
     <id>https://www.clementblog.tech/2019/11/29/7-yue-8-ri-shi-xi-wen-ti-zong-jie/</id>
     <published>2019-11-29T15:20:31.000Z</published>
-    <updated>2019-11-29T15:23:59.898Z</updated>
+    <updated>2020-01-11T09:22:53.117Z</updated>
     
     <summary type="html">
     
@@ -36,6 +90,10 @@
     </summary>
     
     
+      <category term="专业类" scheme="https://www.clementblog.tech/categories/%E4%B8%93%E4%B8%9A%E7%B1%BB/"/>
+    
+    
+      <category term="实习" scheme="https://www.clementblog.tech/tags/%E5%AE%9E%E4%B9%A0/"/>
     
   </entry>
   
@@ -494,56 +552,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>互联网创业大赛参赛指南</title>
-    <link href="https://www.clementblog.tech/2019/04/03/hu-lian-wang-chuang-ye-da-sai-can-sai-zhi-nan/"/>
-    <id>https://www.clementblog.tech/2019/04/03/hu-lian-wang-chuang-ye-da-sai-can-sai-zhi-nan/</id>
-    <published>2019-04-03T12:17:37.000Z</published>
-    <updated>2019-04-22T13:56:26.735Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;互联网创业大赛参赛指南&quot;&gt;&lt;a href=&quot;#互联网创业大赛参赛指南&quot; class=&quot;headerlink&quot; title=&quot;互联网创业大赛参赛指南&quot;&gt;&lt;/a&gt;互联网创业大赛参赛指南&lt;/h1&gt;&lt;h3 id=&quot;赛前热身&quot;&gt;&lt;a href=&quot;#赛前热身&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="互联网+" scheme="https://www.clementblog.tech/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>考研数学导学课学习感悟</title>
-    <link href="https://www.clementblog.tech/2019/03/30/kao-yan-shu-xue-dao-xue-ke-xue-xi-gan-wu/"/>
-    <id>https://www.clementblog.tech/2019/03/30/kao-yan-shu-xue-dao-xue-ke-xue-xi-gan-wu/</id>
-    <published>2019-03-30T09:09:11.000Z</published>
-    <updated>2019-03-30T09:37:46.854Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;考研数学导学课学习感悟&quot;&gt;&lt;a href=&quot;#考研数学导学课学习感悟&quot; class=&quot;headerlink&quot; title=&quot;考研数学导学课学习感悟&quot;&gt;&lt;/a&gt;考研数学导学课学习感悟&lt;/h1&gt;&lt;h2 id=&quot;备考阶段划分&quot;&gt;&lt;a href=&quot;#备考阶段划分&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="考研" scheme="https://www.clementblog.tech/tags/%E8%80%83%E7%A0%94/"/>
     
   </entry>
   
