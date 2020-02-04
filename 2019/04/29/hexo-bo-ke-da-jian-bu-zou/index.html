@@ -113,6 +113,17 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="/friends" class="waves-effect waves-light">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
@@ -204,6 +215,17 @@
         
 <li class="m-nav-item">
 			
+				<a href="/contact" class="waves-effect waves-light">
+					
+					<i class="fa-fw fas fa-comments"></i>
+					
+					Contact
+				</a>
+          
+        </li>
+        
+<li class="m-nav-item">
+			
 				<a href="/friends" class="waves-effect waves-light">
 					
 					<i class="fa-fw fas fa-address-book"></i>
@@ -214,74 +236,11 @@
         </li>
         
         
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="https://github.com/zbs02355/zbs02355.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
-            </a>
-        </li>
-        
     </ul>
 </div>
 
         </div>
 
-        
-            <style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
-
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
-
-<a href="https://github.com/zbs02355/zbs02355.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewBox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
         
     </nav>
 
@@ -304,7 +263,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -453,7 +412,7 @@
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        766
+                        801
                     </div>
                     
 
@@ -524,15 +483,18 @@ git config --global core.editor "code --wait"
 </blockquote>
 <ol start="3">
 <li>使用<strong>淘宝镜像cnpm</strong>替换自带的npm<ul>
-<li>命令<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org </code></pre></li>
+<li>命令<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org 
+   </code></pre></li>
 </ul>
 </li>
 <li>输入以下两个命令安装hexo所需的文件<pre><code>cnpm install -g hexo-cli
-cnpm install hexo --save</code></pre></li>
+cnpm install hexo --save
+   </code></pre></li>
 <li>输入<code>hexo -v</code>查看Hexo是否安装完成</li>
 <li>在本地新建一个文件夹，名称格式：<code>用户名.github.io</code></li>
 <li>进入该文件夹，输入以下两个命令初始化hexo博客，以及安装相应包<pre><code>hexo init
-cnpm install</code></pre></li>
+cnpm install
+   </code></pre></li>
 <li>修改博客根目录下的<code>_config.yml</code>文件，要修改的内容如下<pre><code>title: #浏览器导航栏显示的内容
 subtitle: #网站主标题
 description: #网站副标题
@@ -564,7 +526,7 @@ deploy:
 </li>
 </ol>
 <blockquote>
-<p>参考文章：<a href="https://www.cnblogs.com/joy99/p/6985456.html" target="_blank" rel="noopener">Hexo安装</a> <a href="https://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像cnpm</a> <a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">ERROR Deployer not found</a> <a href="https://blog.csdn.net/Cirzearchenille/article/details/88802534" target="_blank" rel="noopener">gitalk配置</a></p>
+<p>参考文章：<a href="https://www.cnblogs.com/joy99/p/6985456.html" target="_blank" rel="noopener">Hexo安装</a> <a href="https://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像cnpm</a> <a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">ERROR Deployer not found</a> <a href="https://blog.csdn.net/Cirzearchenille/article/details/88802534" target="_blank" rel="noopener">gitalk配置</a> ; <a href="https://blog.csdn.net/mayuko2012/article/details/60606326" target="_blank" rel="noopener">解决HEXO出现ERROR Deployer not found: git的问题</a> ; <a href="https://blog.csdn.net/o_mario_o/article/details/80347863" target="_blank" rel="noopener">不买服务器，不买域名，不花一分钱，hexo+github搭建自己的博客</a></p>
 </blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -688,7 +650,7 @@ deploy:
     <div id="rewardModal" class="modal">
         <div class="modal-content">
             <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <h4 class="reward-title">欢迎打赏</h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
@@ -816,7 +778,7 @@ deploy:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="知识图谱学习笔记">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="知识图谱学习笔记">
                         
                         <span class="card-title">知识图谱学习笔记</span>
                     </div>
@@ -868,7 +830,7 @@ deploy:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="hello-world">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hello-world">
                         
                         <span class="card-title">hello-world</span>
                     </div>
@@ -1158,6 +1120,10 @@ deploy:
 
 
 
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
 
 </div>
     </div>
