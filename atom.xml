@@ -1,20 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Clement-阿五(专栏)</title>
+  <title>Zbs(专栏)</title>
   
-  <subtitle>Clement-阿五的读书笔记</subtitle>
+  <subtitle>Zbs的读书笔记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.clementblog.tech/"/>
-  <updated>2020-01-22T14:44:47.430Z</updated>
+  <updated>2020-04-15T02:10:50.420Z</updated>
   <id>https://www.clementblog.tech/</id>
   
   <author>
-    <name>Clement-阿五</name>
+    <name>Zbs</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中医与保健课程笔记</title>
+    <link href="https://www.clementblog.tech/2020/04/15/zhong-yi-yu-bao-jian-ke-cheng-bi-ji/"/>
+    <id>https://www.clementblog.tech/2020/04/15/zhong-yi-yu-bao-jian-ke-cheng-bi-ji/</id>
+    <published>2020-04-15T01:07:13.000Z</published>
+    <updated>2020-04-15T02:10:50.420Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;2020年中医与保健课程学习笔记&quot;&gt;&lt;a href=&quot;#2020年中医与保健课程学习笔记&quot; class=&quot;headerlink&quot; title=&quot;2020年中医与保健课程学习笔记&quot;&gt;&lt;/a&gt;2020年中医与保健课程学习笔记&lt;/h1&gt;&lt;hr&gt;
+&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="课外学习类" scheme="https://www.clementblog.tech/categories/%E8%AF%BE%E5%A4%96%E5%AD%A6%E4%B9%A0%E7%B1%BB/"/>
+    
+    
+      <category term="中医" scheme="https://www.clementblog.tech/tags/%E4%B8%AD%E5%8C%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word学习笔记</title>
+    <link href="https://www.clementblog.tech/2020/02/05/word-xue-xi-bi-ji/"/>
+    <id>https://www.clementblog.tech/2020/02/05/word-xue-xi-bi-ji/</id>
+    <published>2020-02-05T03:46:03.000Z</published>
+    <updated>2020-04-15T02:09:25.313Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Word学习笔记&quot;&gt;&lt;a href=&quot;#Word学习笔记&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="课外学习类" scheme="https://www.clementblog.tech/categories/%E8%AF%BE%E5%A4%96%E5%AD%A6%E4%B9%A0%E7%B1%BB/"/>
+    
+    
+      <category term="Word" scheme="https://www.clementblog.tech/tags/Word/"/>
+    
+  </entry>
   
   <entry>
     <title>含金量高的证书</title>
@@ -48,7 +103,7 @@
     <link href="https://www.clementblog.tech/2020/01/21/gei-win10-xi-tong-de-dian-nao-jia-su-fang-fa/"/>
     <id>https://www.clementblog.tech/2020/01/21/gei-win10-xi-tong-de-dian-nao-jia-su-fang-fa/</id>
     <published>2020-01-21T10:06:21.000Z</published>
-    <updated>2020-01-22T14:44:30.295Z</updated>
+    <updated>2020-04-15T03:06:51.466Z</updated>
     
     <summary type="html">
     
@@ -56,7 +111,7 @@
       
         
         
-          &lt;h1 id=&quot;给Win10系统的电脑加速方法&quot;&gt;&lt;a href=&quot;#给Win10系统的电脑加速方法&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;给Win10系统的电脑加速方法&quot;&gt;&lt;a href=&quot;#给Win10系统的电脑加速方法&quot; class=&quot;headerlink&quot; title=&quot;给Win10系统的电脑加速方法&quot;&gt;&lt;/a&gt;给Win10系统的电脑加速方法&lt;/h1&gt;&lt;h3 id=&quot;修改服务篇&quot;&gt;&lt;a
         
       
     
@@ -75,7 +130,7 @@
     <link href="https://www.clementblog.tech/2020/01/20/flash-cha-jian-qu-guang-gao-bu-zou/"/>
     <id>https://www.clementblog.tech/2020/01/20/flash-cha-jian-qu-guang-gao-bu-zou/</id>
     <published>2020-01-20T01:32:15.000Z</published>
-    <updated>2020-01-22T14:44:19.057Z</updated>
+    <updated>2020-04-15T03:06:29.206Z</updated>
     
     <summary type="html">
     
@@ -83,7 +138,7 @@
       
         
         
-          &lt;h1 id=&quot;flash插件去广告步骤&quot;&gt;&lt;a href=&quot;#flash插件去广告步骤&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;flash插件去广告步骤&quot;&gt;&lt;a href=&quot;#flash插件去广告步骤&quot; class=&quot;headerlink&quot; title=&quot;flash插件去广告步骤&quot;&gt;&lt;/a&gt;flash插件去广告步骤&lt;/h1&gt;&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot;
         
       
     
@@ -156,7 +211,7 @@
     <link href="https://www.clementblog.tech/2019/11/29/7-yue-8-ri-shi-xi-wen-ti-zong-jie/"/>
     <id>https://www.clementblog.tech/2019/11/29/7-yue-8-ri-shi-xi-wen-ti-zong-jie/</id>
     <published>2019-11-29T15:20:31.000Z</published>
-    <updated>2020-01-22T14:43:17.759Z</updated>
+    <updated>2020-04-15T03:08:00.932Z</updated>
     
     <summary type="html">
     
@@ -183,7 +238,7 @@
     <link href="https://www.clementblog.tech/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/"/>
     <id>https://www.clementblog.tech/2019/11/04/photoshop2015-an-zhuang-jiao-cheng/</id>
     <published>2019-11-04T04:41:30.000Z</published>
-    <updated>2020-01-30T13:35:04.100Z</updated>
+    <updated>2020-04-15T03:09:13.607Z</updated>
     
     <summary type="html">
     
@@ -237,7 +292,7 @@
     <link href="https://www.clementblog.tech/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/"/>
     <id>https://www.clementblog.tech/2019/07/07/kao-yan-ji-chu-yue-du-bi-ji/</id>
     <published>2019-07-07T14:11:25.000Z</published>
-    <updated>2020-01-22T14:42:24.579Z</updated>
+    <updated>2020-04-15T03:11:22.109Z</updated>
     
     <summary type="html">
     
@@ -291,7 +346,7 @@
     <link href="https://www.clementblog.tech/2019/06/28/choco-xue-xi-gan-wu/"/>
     <id>https://www.clementblog.tech/2019/06/28/choco-xue-xi-gan-wu/</id>
     <published>2019-06-28T00:20:18.000Z</published>
-    <updated>2020-01-22T14:41:47.794Z</updated>
+    <updated>2020-04-15T03:14:39.902Z</updated>
     
     <summary type="html">
     
@@ -299,8 +354,7 @@
       
         
         
-          &lt;h1 id=&quot;chocolatey学习笔记&quot;&gt;&lt;a href=&quot;#chocolatey学习笔记&quot; class=&quot;headerlink&quot; title=&quot;chocolatey学习笔记&quot;&gt;&lt;/a&gt;chocolatey学习笔记&lt;/h1&gt;&lt;hr&gt;
-&lt;h3 id=&quot;介绍&quot;&gt;&lt;a
+          &lt;h1 id=&quot;chocolatey学习笔记&quot;&gt;&lt;a href=&quot;#chocolatey学习笔记&quot; class=&quot;headerlink&quot; title=&quot;chocolatey学习笔记&quot;&gt;&lt;/a&gt;chocolatey学习笔记&lt;/h1&gt;&lt;h3 id=&quot;介绍&quot;&gt;&lt;a
         
       
     
@@ -319,7 +373,7 @@
     <link href="https://www.clementblog.tech/2019/06/26/maven-an-zhuang-yu-pei-zhi/"/>
     <id>https://www.clementblog.tech/2019/06/26/maven-an-zhuang-yu-pei-zhi/</id>
     <published>2019-06-26T11:45:35.000Z</published>
-    <updated>2019-07-09T10:46:32.794Z</updated>
+    <updated>2020-04-15T03:16:16.166Z</updated>
     
     <summary type="html">
     
@@ -327,11 +381,8 @@
       
         
         
-          &lt;blockquote&gt;&lt;p&gt;这是之前我安装、配置Maven的步骤，写在这里，便于以后查阅&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;Clement-阿五&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;系统环境：Windows
+          &lt;h1 id=&quot;Maven安装与配置&quot;&gt;&lt;a href=&quot;#Maven安装与配置&quot; class=&quot;headerlink&quot; title=&quot;Maven安装与配置&quot;&gt;&lt;/a&gt;Maven安装与配置&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;系统环境：Windows 10 专业版&lt;br&gt; 
         
       
     
@@ -350,7 +401,7 @@
     <link href="https://www.clementblog.tech/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/"/>
     <id>https://www.clementblog.tech/2019/05/18/photoshop2015-pei-zhi-yu-you-hua/</id>
     <published>2019-05-18T08:27:53.000Z</published>
-    <updated>2020-01-22T14:40:54.393Z</updated>
+    <updated>2020-04-15T03:18:36.831Z</updated>
     
     <summary type="html">
     
@@ -377,7 +428,7 @@
     <link href="https://www.clementblog.tech/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/"/>
     <id>https://www.clementblog.tech/2019/05/11/mysql-de-an-zhuang-yu-pei-zhi/</id>
     <published>2019-05-11T10:37:39.000Z</published>
-    <updated>2020-01-22T14:32:43.323Z</updated>
+    <updated>2020-04-15T03:20:25.521Z</updated>
     
     <summary type="html">
     
@@ -404,7 +455,7 @@
     <link href="https://www.clementblog.tech/2019/05/11/cheng-xu-yuan-bi-du-shu-dan/"/>
     <id>https://www.clementblog.tech/2019/05/11/cheng-xu-yuan-bi-du-shu-dan/</id>
     <published>2019-05-11T03:17:03.000Z</published>
-    <updated>2020-01-22T14:39:46.115Z</updated>
+    <updated>2020-04-15T03:20:53.636Z</updated>
     
     <summary type="html">
     
@@ -412,8 +463,7 @@
       
         
         
-          &lt;h1 id=&quot;程序员必读书单&quot;&gt;&lt;a href=&quot;#程序员必读书单&quot; class=&quot;headerlink&quot; title=&quot;程序员必读书单&quot;&gt;&lt;/a&gt;程序员必读书单&lt;/h1&gt;&lt;hr&gt;
-&lt;ul&gt;
+          &lt;h1 id=&quot;程序员必读书单&quot;&gt;&lt;a href=&quot;#程序员必读书单&quot; class=&quot;headerlink&quot; title=&quot;程序员必读书单&quot;&gt;&lt;/a&gt;程序员必读书单&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt;
         
       
@@ -433,7 +483,7 @@
     <link href="https://www.clementblog.tech/2019/05/07/kong-jian-shu-ju-fen-xi-xue-xi-bi-ji/"/>
     <id>https://www.clementblog.tech/2019/05/07/kong-jian-shu-ju-fen-xi-xue-xi-bi-ji/</id>
     <published>2019-05-07T07:58:18.000Z</published>
-    <updated>2020-01-22T14:32:28.964Z</updated>
+    <updated>2020-04-15T01:09:10.987Z</updated>
     
     <summary type="html">
     
@@ -441,7 +491,8 @@
       
         
         
-          &lt;h1 id=&quot;空间数据分析学习笔记&quot;&gt;&lt;a href=&quot;#空间数据分析学习笔记&quot; class=&quot;headerlink&quot; title=&quot;空间数据分析学习笔记&quot;&gt;&lt;/a&gt;空间数据分析学习笔记&lt;/h1&gt;&lt;h3 id=&quot;空间数据模型篇&quot;&gt;&lt;a href=&quot;#空间数据模型篇&quot;
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h1 id=&quot;空间数据分析学习笔记&quot;&gt;&lt;a href=&quot;#空间数据分析学习笔记&quot; class=&quot;headerlink&quot; title=&quot;空间数据分析学习笔记&quot;&gt;&lt;/a&gt;空间数据分析学习笔记&lt;/h1&gt;&lt;h3 id=&quot;空间数据模型篇&quot;&gt;&lt;a
         
       
     
@@ -456,38 +507,11 @@
   </entry>
   
   <entry>
-    <title>自然语言处理学习笔记</title>
-    <link href="https://www.clementblog.tech/2019/05/05/zi-ran-yu-yan-chu-li-xue-xi-bi-ji/"/>
-    <id>https://www.clementblog.tech/2019/05/05/zi-ran-yu-yan-chu-li-xue-xi-bi-ji/</id>
-    <published>2019-05-05T12:54:09.000Z</published>
-    <updated>2020-01-22T14:32:09.515Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;自然语言处理学习笔记&quot;&gt;&lt;a href=&quot;#自然语言处理学习笔记&quot; class=&quot;headerlink&quot; title=&quot;自然语言处理学习笔记&quot;&gt;&lt;/a&gt;自然语言处理学习笔记&lt;/h1&gt;&lt;h3 id=&quot;基础知识篇&quot;&gt;&lt;a href=&quot;#基础知识篇&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件开发类" scheme="https://www.clementblog.tech/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%B1%BB/"/>
-    
-    
-      <category term="自然语言处理" scheme="https://www.clementblog.tech/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
     <title>前端学习笔记</title>
     <link href="https://www.clementblog.tech/2019/04/30/qian-duan-xue-xi-bi-ji/"/>
     <id>https://www.clementblog.tech/2019/04/30/qian-duan-xue-xi-bi-ji/</id>
     <published>2019-04-30T09:02:34.000Z</published>
-    <updated>2020-01-22T14:31:43.216Z</updated>
+    <updated>2020-04-15T03:30:36.253Z</updated>
     
     <summary type="html">
     
@@ -495,10 +519,9 @@
       
         
         
-          &lt;h1 id=&quot;前端学习笔记&quot;&gt;&lt;a href=&quot;#前端学习笔记&quot; class=&quot;headerlink&quot; title=&quot;前端学习笔记&quot;&gt;&lt;/a&gt;前端学习笔记&lt;/h1&gt;&lt;hr&gt;
-&lt;ol&gt;
+          &lt;h1 id=&quot;前端学习笔记&quot;&gt;&lt;a href=&quot;#前端学习笔记&quot; class=&quot;headerlink&quot; title=&quot;前端学习笔记&quot;&gt;&lt;/a&gt;前端学习笔记&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;所有的空格 / 空行都会被浏览器解析为一个空格&lt;/li&gt;
-&lt;li&gt;即将被废弃的标签
+&lt;li&gt;即将被废弃的标签 和
         
       
     
@@ -517,7 +540,7 @@
     <link href="https://www.clementblog.tech/2019/04/30/lstm-xi-lie-shen-jing-wang-luo-xue-xi-bi-ji/"/>
     <id>https://www.clementblog.tech/2019/04/30/lstm-xi-lie-shen-jing-wang-luo-xue-xi-bi-ji/</id>
     <published>2019-04-30T08:13:33.000Z</published>
-    <updated>2020-01-22T14:31:07.101Z</updated>
+    <updated>2020-04-15T03:25:30.528Z</updated>
     
     <summary type="html">
     
@@ -536,33 +559,6 @@
     
     
       <category term="深度学习" scheme="https://www.clementblog.tech/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高效搜索学习笔记</title>
-    <link href="https://www.clementblog.tech/2019/04/30/gao-xiao-sou-suo-xue-xi-bi-ji/"/>
-    <id>https://www.clementblog.tech/2019/04/30/gao-xiao-sou-suo-xue-xi-bi-ji/</id>
-    <published>2019-04-30T08:13:03.000Z</published>
-    <updated>2020-01-22T14:31:23.630Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;高效搜索学习笔记&quot;&gt;&lt;a href=&quot;#高效搜索学习笔记&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="课外学习类" scheme="https://www.clementblog.tech/categories/%E8%AF%BE%E5%A4%96%E5%AD%A6%E4%B9%A0%E7%B1%BB/"/>
-    
-    
-      <category term="高效搜索" scheme="https://www.clementblog.tech/tags/%E9%AB%98%E6%95%88%E6%90%9C%E7%B4%A2/"/>
     
   </entry>
   
