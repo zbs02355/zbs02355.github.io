@@ -411,14 +411,14 @@
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        801
+                        1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        4 分
                     </div>
                     
                 
@@ -480,20 +480,26 @@ git config --global core.editor "code --wait"
 <p>choco命令要在管理员模式的命令行中运行,否则会报错！</p>
 </blockquote>
 <ol start="3">
-<li>使用<strong>淘宝镜像cnpm</strong>替换自带的npm<ul>
+<li><p>使用<strong>淘宝镜像cnpm</strong>替换自带的npm</p>
+<ul>
 <li>命令<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org 
    </code></pre></li>
 </ul>
 </li>
-<li>输入以下两个命令安装hexo所需的文件<pre><code>cnpm install -g hexo-cli
+<li><p>输入以下两个命令安装hexo所需的文件</p>
+<pre><code>cnpm install -g hexo-cli
 cnpm install hexo --save
    </code></pre></li>
-<li>输入<code>hexo -v</code>查看Hexo是否安装完成</li>
-<li>在本地新建一个文件夹，名称格式：<code>用户名.github.io</code></li>
-<li>进入该文件夹，输入以下两个命令初始化hexo博客，以及安装相应包<pre><code>hexo init
+<li><p>输入<code>hexo -v</code>查看Hexo是否安装完成</p>
+</li>
+<li><p>在本地新建一个文件夹，名称格式：<code>用户名.github.io</code></p>
+</li>
+<li><p>进入该文件夹，输入以下两个命令初始化hexo博客，以及安装相应包</p>
+<pre><code>hexo init
 cnpm install
    </code></pre></li>
-<li>修改博客根目录下的<code>_config.yml</code>文件，要修改的内容如下<pre><code>title: #浏览器导航栏显示的内容
+<li><p>修改博客根目录下的<code>_config.yml</code>文件，要修改的内容如下</p>
+<pre><code>title: #浏览器导航栏显示的内容
 subtitle: #网站主标题
 description: #网站副标题
 keywords: # 关键词不用写，写了也没用，因为GitHub禁止百度爬虫访问
@@ -508,8 +514,10 @@ deploy:
    repository: https://github.com/GitHub用户名/GitHub用户名.github.io.git
    branch: master
 </code></pre></li>
-<li>可以到<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题</a>下载喜欢的主题，并按照主题教程进行配置</li>
-<li>到<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方API</a>去学习常见写作命令，这里列出一些使用最多的几个命令：<ul>
+<li><p>可以到<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题</a>下载喜欢的主题，并按照主题教程进行配置</p>
+</li>
+<li><p>到<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方API</a>去学习常见写作命令，这里列出一些使用最多的几个命令：</p>
+<ul>
 <li>hexo clean: 清除<code>public目录</code>和<code>db.json</code></li>
 <li>hexo g: 生成静态网页</li>
 <li>hexo s: 启动本地服务器，默认地址是：<code>http://localhost:4000</code></li>
@@ -517,10 +525,36 @@ deploy:
 <li>hexo new post ‘文章名’: 新建一篇文章</li>
 </ul>
 </li>
-<li>在部署的时候，要先安装<code>hexo-deployer-git</code>这个包，否则会报错，输入命令：<pre><code>cnpm install --save hexo-deployer-git</code></pre></li>
-<li>评论系统<a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md" target="_blank" rel="noopener">gitalk</a>开启方法：<ul>
+<li><p>在部署的时候，要先安装<code>hexo-deployer-git</code>这个包，否则会报错，输入命令：</p>
+<pre><code>cnpm install --save hexo-deployer-git</code></pre></li>
+<li><p>评论系统<a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md" target="_blank" rel="noopener">gitalk</a>开启方法：</p>
+<ul>
 <li>修改相关参数，注意参数都是<strong>字符串</strong></li>
 </ul>
+</li>
+<li><p><strong>购买域名</strong>。购买完成后，点击<code>Manage DNS</code>，进入域名管理系统，如图<img src="2019-4-29-Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/h1.png" alt=""></p>
+<img src="/2019/04/29/hexo-bo-ke-da-jian-bu-zou/h1.png" class="">
+</li>
+<li><p><strong>设置域名对应的IP地址</strong>。点击<code>A Record</code>进入IP地址绑定界面，如图<img src="2019-4-29-Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/h2.png" alt=""></p>
+<img src="/2019/04/29/hexo-bo-ke-da-jian-bu-zou/h2.png" class="">
+</li>
+<li><p>点击<code>Add A Record</code>按钮新增IP地址表单项，如图<img src="2019-4-29-Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/h3.png" alt=""></p>
+<img src="/2019/04/29/hexo-bo-ke-da-jian-bu-zou/h3.png" class="">
+
+</li>
+</ol>
+<blockquote>
+<p>如果网站放在Github上，Github服务器的IP地址有两个，分别是    192.30.252.153、    192.30.252.154</p>
+</blockquote>
+<ol start="16">
+<li><p><strong>设置CNAME</strong>。点击<code>CName Record</code>进入当前域名绑定IP地址界面，为域名划分子域名，如图<img src="2019-4-29-Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/h4.png" alt=""></p>
+<img src="/2019/04/29/hexo-bo-ke-da-jian-bu-zou/h4.png" class="">
+</li>
+<li><p>点击<code>Add CNAME Record</code>按钮，进入新增CNAME记录页面，输入子域名的名称以及对应的外网域名，如图<img src="2019-4-29-Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/h5.png" alt=""></p>
+<img src="/2019/04/29/hexo-bo-ke-da-jian-bu-zou/h5.png" class=""></li>
+<li><p>在网站根目录下的source目录中创建无后缀的CNAME文件，将设置好的网站域名保存到CNAME文件中。</p>
+</li>
+<li><p>域名设置完成。</p>
 </li>
 </ol>
 <blockquote>
@@ -895,7 +929,7 @@ deploy:
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.6k</span>&nbsp;字
+                class="white-color">19.1k</span>&nbsp;字
             
             
             
