@@ -483,7 +483,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08"]
+            data: ["2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09"]
         },
         yAxis: {
             type: 'value',
@@ -493,7 +493,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,2,0,3,1,0,1,0,0,0,0],
+                data: [0,0,2,0,3,1,0,1,0,0,0,0,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -535,7 +535,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"考研类","value":2},{"name":"配置类","value":8},{"name":"专业类","value":11},{"name":"软件开发类","value":9},{"name":"医学类","value":1},{"name":"课外学习类","value":11}],
+                data: [{"name":"专业类","value":11},{"name":"配置类","value":8},{"name":"软件开发类","value":9},{"name":"医学类","value":1},{"name":"课外学习类","value":11},{"name":"考研类","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -559,7 +559,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Java","互联网+","英语","Photoshop","实习","Flutter","HBase","R语言","python","半月板"]
+                data: ["Java","互联网+","Photoshop","英语","实习","Flutter","HBase","R语言","python","半月板"]
             }
         ],
         yAxis: [
@@ -762,12 +762,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E8%8B%B1%E8%AF%AD/">
-                <span class="chip center-align waves-effect waves-light chip-default">英语</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E5%AE%9E%E4%B9%A0/">
                 <span class="chip center-align waves-effect waves-light chip-default">实习</span>
             </a>
@@ -814,14 +808,14 @@
             
             
             
-            <a href="/tags/%E4%BC%98%E7%BE%8E%E8%AF%AD%E5%8F%A5/">
-                <span class="chip center-align waves-effect waves-light chip-default">优美语句</span>
+            <a href="/tags/%E6%91%84%E5%BD%B1/">
+                <span class="chip center-align waves-effect waves-light chip-default">摄影</span>
             </a>
             
             
             
-            <a href="/tags/%E6%91%84%E5%BD%B1/">
-                <span class="chip center-align waves-effect waves-light chip-default">摄影</span>
+            <a href="/tags/%E4%BC%98%E7%BE%8E%E8%AF%AD%E5%8F%A5/">
+                <span class="chip center-align waves-effect waves-light chip-default">优美语句</span>
             </a>
             
             
@@ -862,6 +856,12 @@
             
             
             
+            <a href="/tags/%E8%8B%B1%E8%AF%AD/">
+                <span class="chip center-align waves-effect waves-light chip-default">英语</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E6%95%B0%E5%AD%A6/">
                 <span class="chip center-align waves-effect waves-light chip-default">数学</span>
             </a>
@@ -880,14 +880,14 @@
             
             
             
-            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                <span class="chip center-align waves-effect waves-light chip-default">前端</span>
+            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                <span class="chip center-align waves-effect waves-light chip-default">深度学习</span>
             </a>
             
             
             
-            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                <span class="chip center-align waves-effect waves-light chip-default">深度学习</span>
+            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">前端</span>
             </a>
             
             
@@ -904,14 +904,14 @@
             
             
             
-            <a href="/tags/MySQL/">
-                <span class="chip center-align waves-effect waves-light chip-default">MySQL</span>
+            <a href="/tags/%E4%B9%A6%E7%B1%8D/">
+                <span class="chip center-align waves-effect waves-light chip-default">书籍</span>
             </a>
             
             
             
-            <a href="/tags/%E4%B9%A6%E7%B1%8D/">
-                <span class="chip center-align waves-effect waves-light chip-default">书籍</span>
+            <a href="/tags/MySQL/">
+                <span class="chip center-align waves-effect waves-light chip-default">MySQL</span>
             </a>
             
             
@@ -1018,13 +1018,13 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">年份</span>
-            <a href="https://www.clementblog.tech" target="_blank">Zbs</a>
+            <a href="https://zbs02355.github.io" target="_blank">Zbs</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.1k</span>&nbsp;字
+                class="white-color">19.2k</span>&nbsp;字
             
             
             
